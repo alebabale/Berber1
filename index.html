@@ -1,4 +1,4 @@
-?<!doctype html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;650;750;850;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="concepts.css?v=mobile-polish-6" />
+    <link rel="stylesheet" href="concepts.css?v=compact-planity-menu-2" />
   </head>
   <body class="v1 layout-one v1-polished">
     <header class="site-header">
       <a class="brand" href="#top">
         <img src="assets/berber1-logo.png" alt="Berber1 Bietigheim Logo" />
       </a>
+      <button class="mobile-section-toggle" type="button" aria-expanded="false" aria-controls="mobile-section-menu">Menü</button>
       <nav aria-label="Navigation">
         <a href="#services">Leistungen</a>
         <a href="#reels">Reels</a>
@@ -22,6 +23,13 @@
         <a href="#kontakt">Kontakt</a>
       </nav>
       <a class="header-cta" href="#planity">Termin buchen</a>
+      <div class="mobile-section-menu" id="mobile-section-menu" aria-label="Schnellnavigation">
+        <a href="#top">Start</a>
+        <a href="#services">Leistungen</a>
+        <a href="#reels">Reels</a>
+        <a href="#planity">Buchen</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
     </header>
 
     <main id="top">
@@ -251,7 +259,7 @@
     </aside>
     <button class="floating-whatsapp" type="button" data-open-widget>WhatsApp</button>
     <footer><strong>Berber1 Herrenfriseur</strong><div><span>Buchstraße 34, 74321 Bietigheim-Bissingen</span><a href="tel:+4971429189666">+49 7142 9189666</a></div></footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=compact-planity-menu-2"></script>
   </body>
 </html>
 

@@ -47,6 +47,8 @@ const panel = document.querySelector("#whatsapp-widget");
 const openWidgetButtons = [...document.querySelectorAll("[data-open-widget]")];
 const closeWidgetButton = document.querySelector("[data-close-widget]");
 const floatingWhatsapp = document.querySelector(".floating-whatsapp");
+const mobileSectionToggle = document.querySelector(".mobile-section-toggle");
+const mobileSectionMenu = document.querySelector(".mobile-section-menu");
 const widgetServiceButtons = [...document.querySelectorAll("[data-widget-service]")];
 const widgetStaffButtons = [...document.querySelectorAll("[data-widget-staff]")];
 const widgetTimeButtons = [...document.querySelectorAll("[data-widget-time]")];
@@ -132,6 +134,27 @@ function updateFloatingWhatsapp() {
 
 window.addEventListener("scroll", updateFloatingWhatsapp, { passive: true });
 updateFloatingWhatsapp();
+
+function setMobileMenuOpen(isOpen) {
+  if (!mobileSectionToggle || !mobileSectionMenu) return;
+
+  mobileSectionMenu.classList.toggle("is-open", isOpen);
+  mobileSectionToggle.setAttribute("aria-expanded", String(isOpen));
+}
+
+if (mobileSectionToggle && mobileSectionMenu) {
+  mobileSectionToggle.addEventListener("click", () => {
+    setMobileMenuOpen(!mobileSectionMenu.classList.contains("is-open"));
+  });
+
+  mobileSectionMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMobileMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMobileMenuOpen(false);
+  });
+}
 
 const gallery = document.querySelector("[data-gallery]");
 const slides = gallery ? [...gallery.querySelectorAll(".gallery-slide")] : [];
