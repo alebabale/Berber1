@@ -1024,7 +1024,7 @@ footer div {
 }
 
 .layout-one .hero {
-  padding-top: clamp(132px, 18vw, 184px);
+  padding-top: clamp(150px, 18vw, 220px);
 }
 
 .layout-one .hero-actions,
@@ -1273,7 +1273,13 @@ footer div {
 
   .layout-one .hero {
     grid-template-columns: minmax(0, 1.22fr) minmax(280px, 0.78fr);
-    align-items: end;
+    align-items: start;
+    padding-top: clamp(250px, 18vw, 300px);
+  }
+
+  .layout-one .logo-card {
+    align-self: start;
+    margin-top: clamp(36px, 4vw, 64px);
   }
 
   .gallery-card {
