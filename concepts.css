@@ -108,6 +108,7 @@ nav {
 
 .btn,
 .header-cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -116,11 +117,27 @@ nav {
   border-radius: 999px;
   padding: 16px 22px;
   font-weight: 850;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
 .btn::after,
 .header-cta::after {
   content: "\2192";
+}
+
+.btn::before,
+.header-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -48%;
+  z-index: -1;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.26), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 0.28s ease, transform 0.5s ease;
 }
 
 .btn-red,
@@ -139,6 +156,25 @@ nav {
   color: var(--cream);
   border: 1px solid rgba(244, 238, 228, 0.2);
   background: rgba(244, 238, 228, 0.06);
+}
+
+.btn-call {
+  color: var(--cream);
+  border: 1px solid rgba(237, 17, 29, 0.44);
+  background:
+    linear-gradient(135deg, rgba(237, 17, 29, 0.16), rgba(247, 241, 231, 0.07)),
+    rgba(8, 6, 5, 0.48);
+}
+
+.btn:hover,
+.header-cta:hover {
+  transform: translateY(-2px);
+}
+
+.btn:hover::before,
+.header-cta:hover::before {
+  opacity: 1;
+  transform: translateX(330%) skewX(-18deg);
 }
 
 .eyebrow,
@@ -239,10 +275,26 @@ section {
 .service-card,
 .price-card,
 .feature-card {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 30px;
   padding: 26px;
   background: rgba(244, 238, 228, 0.07);
+  transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease, box-shadow 0.24s ease;
+}
+
+.trust-card::before,
+.service-card::before,
+.price-card::before,
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  opacity: 0;
+  transition: opacity 0.24s ease;
 }
 
 .trust-card span,
@@ -312,10 +364,37 @@ section {
 }
 
 .reel-card {
+  position: relative;
+  overflow: hidden;
   padding: 10px;
   border: 1px solid rgba(247, 241, 231, 0.12);
   border-radius: 26px;
   background: rgba(247, 241, 231, 0.045);
+  transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+}
+
+@media (hover: hover) {
+  .trust-card:hover,
+  .service-card:hover,
+  .price-card:hover,
+  .feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(237, 17, 29, 0.34);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+  }
+
+  .trust-card:hover::before,
+  .service-card:hover::before,
+  .price-card:hover::before,
+  .feature-card:hover::before {
+    opacity: 1;
+  }
+
+  .reel-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(247, 241, 231, 0.28);
+    background: rgba(247, 241, 231, 0.07);
+  }
 }
 
 .before-after-frame {
@@ -763,6 +842,29 @@ footer div {
   gap: 14px;
 }
 
+@keyframes barberRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Version 1: Editorial Split */
 .v1 .hero {
   min-height: 100svh;
@@ -789,16 +891,55 @@ footer div {
   font-weight: 650;
 }
 
+.v1 .hero-copy .eyebrow,
+.v1 .hero-copy h1,
+.v1 .hero-copy p:not(.eyebrow),
+.v1 .hero-actions {
+  animation: barberRise 0.76s ease both;
+}
+
+.v1 .hero-copy h1 {
+  animation-delay: 0.08s;
+  text-shadow: 0 18px 54px rgba(0, 0, 0, 0.42);
+}
+
+.v1 .hero-copy p:not(.eyebrow) {
+  animation-delay: 0.16s;
+}
+
+.v1 .hero-actions {
+  animation-delay: 0.24s;
+}
+
 .v1 .logo-card {
   position: relative;
   z-index: 1;
   display: grid;
   gap: 12px;
+  overflow: hidden;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 32px;
   background: rgba(7, 6, 5, 0.52);
   backdrop-filter: blur(14px);
+  animation: barberRise 0.78s 0.16s ease both;
+}
+
+.v1 .logo-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(237, 17, 29, 0.2), transparent 28%),
+    linear-gradient(140deg, rgba(247, 241, 231, 0.12), transparent 34%, rgba(237, 17, 29, 0.16));
+  opacity: 0.82;
+  pointer-events: none;
+}
+
+.v1 .logo-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .v1 .logo-card img {
@@ -1400,14 +1541,21 @@ footer div {
     justify-content: center;
     min-width: 74px;
     min-height: 46px;
-    border: 1px solid rgba(247, 241, 231, 0.16);
+    border: 1px solid rgba(247, 241, 231, 0.26);
     border-radius: 999px;
     color: var(--cream);
-    background: rgba(247, 241, 231, 0.07);
+    background: rgba(5, 4, 3, 0.72);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 14px 34px rgba(0, 0, 0, 0.26);
     font: inherit;
     font-size: 0.82rem;
     font-weight: 900;
     cursor: pointer;
+  }
+
+  .mobile-section-toggle[aria-expanded="true"] {
+    color: #fff;
+    border-color: rgba(237, 17, 29, 0.76);
+    background: linear-gradient(135deg, var(--accent, var(--red-soft)), var(--red), var(--accent-dark, var(--red-deep)));
   }
 
   .mobile-section-menu {
@@ -1418,12 +1566,14 @@ footer div {
     z-index: 34;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    padding: 12px;
-    border: 1px solid rgba(247, 241, 231, 0.13);
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid rgba(237, 17, 29, 0.5);
     border-radius: 24px;
-    background: rgba(7, 6, 5, 0.92);
-    box-shadow: 0 22px 64px rgba(0, 0, 0, 0.36);
+    background:
+      radial-gradient(circle at 14% 0%, rgba(237, 17, 29, 0.22), transparent 34%),
+      linear-gradient(180deg, rgba(12, 9, 8, 0.98), rgba(5, 4, 3, 0.98));
+    box-shadow: 0 26px 76px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(247, 241, 231, 0.05) inset;
     backdrop-filter: blur(18px);
     opacity: 0;
     pointer-events: none;
@@ -1442,10 +1592,11 @@ footer div {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(247, 241, 231, 0.1);
+    border: 1px solid rgba(247, 241, 231, 0.24);
     border-radius: 999px;
-    color: var(--cream);
-    background: rgba(247, 241, 231, 0.06);
+    color: #fff;
+    background: rgba(247, 241, 231, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
     font-size: 0.82rem;
     font-weight: 900;
   }
