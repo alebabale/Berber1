@@ -165,6 +165,7 @@ h2,
   letter-spacing: 0.045em;
   line-height: 1.12;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 h1 {
@@ -1335,67 +1336,333 @@ footer div {
 }
 
 @media (max-width: 759px) {
-  .brand img {
-    width: 92px;
-    border-radius: 12px;
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
+  main,
+  section {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  section {
+    padding: 78px 22px;
+  }
+
+  .site-header,
   .layout-one .site-header {
-    min-height: 104px;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    inset: 0 auto auto 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100dvw;
+    max-width: 100vw;
+    min-height: 86px;
+    padding: 9px 14px;
+    overflow: hidden;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .brand img {
+    width: 76px;
+    border-radius: 14px;
   }
 
   .layout-one .brand img {
-    width: 96px;
+    width: 76px;
+    border-radius: 14px;
   }
 
   .header-cta {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    flex: 0 1 auto;
+    width: auto;
+    max-width: 128px;
+    min-width: 0;
     min-height: 48px;
+    gap: 10px;
     padding: 12px 14px;
+    overflow: hidden;
+    color: transparent;
+    font-size: 0;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .header-cta::before {
+    content: "Buchen";
+    color: #fff;
     font-size: 0.86rem;
+    line-height: 1;
+  }
+
+  .header-cta::after,
+  .btn::after {
+    content: "→";
+    color: currentColor;
+  }
+
+  .header-cta::after {
+    color: #fff;
+    font-size: 0.95rem;
+  }
+
+  .v1.layout-one .hero,
+  .layout-one .hero,
+  .v1 .hero {
+    min-height: auto;
+    gap: 28px;
+    padding: 122px 28px 72px;
+    background-position: 56% center;
+  }
+
+  .v1.layout-one .hero .logo-card {
+    display: none;
+  }
+
+  .v1 .hero-copy,
+  .layout-one .hero-copy {
+    width: 100%;
+    max-width: calc(100vw - 56px);
+  }
+
+  .layout-one h1 {
+    max-width: 20rem;
+    margin-bottom: 22px;
+    font-size: clamp(2.58rem, 12.4vw, 3.28rem);
+    letter-spacing: 0.038em;
+    line-height: 1.14;
+  }
+
+  .layout-one h2 {
+    font-size: clamp(2.05rem, 10vw, 3.05rem);
+    letter-spacing: 0.036em;
+    line-height: 1.14;
+  }
+
+  .layout-one .eyebrow,
+  .layout-one .section-kicker {
+    margin-bottom: 14px;
+    font-size: 0.66rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.42;
+  }
+
+  .layout-one .hero-copy p:not(.eyebrow) {
+    max-width: 19.8rem;
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .hero-actions,
+  .actions {
+    gap: 12px;
+    margin-top: 26px;
   }
 
   .btn {
     width: 100%;
+    min-height: 58px;
+    padding: 15px 20px;
+    gap: 12px;
+  }
+
+  .section-heading {
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  .trust-card,
+  .service-card,
+  .price-card,
+  .feature-card,
+  .layout-one .trust-card,
+  .layout-one .service-card,
+  .layout-one .price-card,
+  .layout-one .feature-card,
+  .layout-one details {
+    border-radius: 22px;
+    padding: 24px;
+  }
+
+  .layout-one .service-card {
+    min-height: auto;
+  }
+
+  .layout-one .service-card h3,
+  .layout-one .trust-card h3,
+  .layout-one .price-card h3 {
+    letter-spacing: 0.028em;
+    line-height: 1.24;
   }
 
   .service-picker {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .service-picker button {
+    min-height: 50px;
+    padding: 10px 9px;
+    border-radius: 15px;
+    font-size: 0.88rem;
+    line-height: 1.18;
+  }
+
+  .social-section {
+    padding-inline: 22px;
+  }
+
+  .social-layout {
+    gap: 36px;
+  }
+
+  .reel-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    margin-inline: -22px;
+    padding: 0 22px 8px;
+    scroll-padding-inline: 22px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reel-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reel-card {
+    flex: 0 0 min(78vw, 320px);
+    scroll-snap-align: center;
+    border-radius: 24px;
+  }
+
+  .reel-card h3 {
+    margin-top: 16px;
+  }
+
+  .gallery-card,
+  .planity-panel,
+  .quick-book {
+    border-radius: 26px;
+  }
+
+  .gallery-slide {
+    min-height: 330px;
+  }
+
+  .gallery-slide img {
+    height: 330px;
+  }
+
+  .booking-section,
+  .v1 .booking-section {
+    gap: 28px;
+    align-items: start;
+  }
+
+  .booking-note {
+    padding: 14px 16px;
+    border-radius: 18px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .planity-head {
+    grid-template-columns: 58px 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .planity-head img,
+  .layout-one .planity-head img {
+    width: 58px;
+    border-radius: 13px;
+  }
+
+  .planity-head strong {
+    font-size: 0.96rem;
+  }
+
+  .planity-head span {
+    font-size: 0.78rem;
+    line-height: 1.35;
   }
 
   .planity-panel iframe {
-    min-height: 620px;
+    min-height: 560px;
+  }
+
+  .quick-book {
+    padding: 22px;
+  }
+
+  .quick-book strong {
+    font-size: clamp(1.72rem, 9vw, 2.5rem);
+    line-height: 1.16;
+    letter-spacing: 0.034em;
   }
 
   .floating-whatsapp {
-    right: 12px;
+    right: auto;
     left: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: auto;
+    min-width: 132px;
+    min-height: 56px;
+    padding-inline: 20px;
+  }
+
+  @supports (width: 100dvw) {
+    .floating-whatsapp {
+      left: max(12px, calc(100dvw - 144px));
+    }
   }
 
   .whatsapp-panel {
     right: 12px;
     left: 12px;
-    bottom: 84px;
+    bottom: calc(80px + env(safe-area-inset-bottom));
     width: auto;
+    max-height: calc(100svh - 98px);
     padding: 22px;
     border-radius: 26px;
   }
 
   .widget-options {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
   }
 
-  .reel-grid {
-    grid-template-columns: repeat(3, 78vw);
-    margin-inline: -22px;
-    padding-inline: 22px;
+  .widget-options button {
+    min-height: 48px;
+    padding: 10px 9px;
+    border-radius: 14px;
+    font-size: 0.84rem;
+    line-height: 1.18;
   }
 
   .gallery-controls {
     left: 14px;
     right: 14px;
     justify-content: space-between;
+  }
+
+  footer {
+    padding-bottom: calc(104px + env(safe-area-inset-bottom));
   }
 }
 
