@@ -977,8 +977,8 @@ footer div {
 
 .layout-one .site-header {
   gap: 18px;
-  min-height: clamp(118px, 13vw, 164px);
-  padding: 14px clamp(16px, 4vw, 66px);
+  min-height: clamp(108px, 11vw, 146px);
+  padding: 10px clamp(16px, 4vw, 66px);
 }
 
 .layout-one .brand {
@@ -986,7 +986,7 @@ footer div {
 }
 
 .layout-one .brand img {
-  width: clamp(116px, 14vw, 168px);
+  width: clamp(108px, 11vw, 140px);
   aspect-ratio: 1;
   border: 1px solid rgba(247, 241, 231, 0.16);
   border-radius: 18px;
@@ -1274,12 +1274,12 @@ footer div {
   .layout-one .hero {
     grid-template-columns: minmax(0, 1.22fr) minmax(280px, 0.78fr);
     align-items: start;
-    padding-top: clamp(250px, 18vw, 300px);
+    padding-top: clamp(220px, 16vw, 270px);
   }
 
   .layout-one .logo-card {
     align-self: start;
-    margin-top: clamp(36px, 4vw, 64px);
+    margin-top: clamp(28px, 3vw, 48px);
   }
 
   .gallery-card {
@@ -1373,5 +1373,32 @@ footer div {
     left: 14px;
     right: 14px;
     justify-content: space-between;
+  }
+}
+
+/* Final hero alignment override */
+.v1.layout-one .hero {
+  padding-top: clamp(170px, 18vw, 230px);
+}
+
+@media (min-width: 760px) {
+  .v1.layout-one .site-header {
+    min-height: clamp(108px, 11vw, 146px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .v1.layout-one .brand img {
+    width: clamp(108px, 11vw, 140px);
+  }
+
+  .v1.layout-one .hero {
+    align-items: start;
+    padding-top: clamp(220px, 16vw, 270px);
+  }
+
+  .v1.layout-one .logo-card {
+    align-self: start;
+    margin-top: clamp(28px, 3vw, 48px);
   }
 }
