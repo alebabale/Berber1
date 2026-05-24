@@ -81,6 +81,14 @@ function updateWidgetWhatsapp() {
 openWidgetButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
+    if (button.dataset.presetTime) {
+      widgetTime = button.dataset.presetTime;
+      if (widgetTimeInput) widgetTimeInput.value = "";
+      widgetTimeButtons.forEach((item) => {
+        item.classList.toggle("is-selected", item.dataset.widgetTime === widgetTime);
+      });
+      updateWidgetWhatsapp();
+    }
     setPanelOpen(true);
   });
 });
@@ -182,3 +190,73 @@ if (nextGalleryButton) {
 }
 
 showGallerySlide(0);
+
+const reelCards = [...document.querySelectorAll(".reel-card")];
+const desktopReelQuery = window.matchMedia("(min-width: 760px)");
+let activeReel = 0;
+let reelTimer;
+
+function setPlayingReel(cardToPlay) {
+  reelCards.forEach((card) => {
+    card.classList.toggle("is-playing", card === cardToPlay);
+  });
+}
+
+function restartReel(card) {
+  if (!card) return;
+
+  card.classList.remove("is-playing");
+  void card.offsetWidth;
+  setPlayingReel(card);
+}
+
+function isFullyVisible(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= window.innerHeight && rect.right <= window.innerWidth;
+}
+
+function updateMobileReels() {
+  if (desktopReelQuery.matches) return;
+
+  const visibleCard = reelCards.find(isFullyVisible);
+  setPlayingReel(visibleCard || null);
+}
+
+function startDesktopReels() {
+  window.clearInterval(reelTimer);
+  if (!reelCards.length || !desktopReelQuery.matches) return;
+
+  restartReel(reelCards[activeReel]);
+  reelTimer = window.setInterval(() => {
+    activeReel = (activeReel + 1) % reelCards.length;
+    restartReel(reelCards[activeReel]);
+  }, 5000);
+}
+
+function setupReelPlayback() {
+  window.clearInterval(reelTimer);
+
+  if (desktopReelQuery.matches) {
+    startDesktopReels();
+  } else {
+    setPlayingReel(null);
+    updateMobileReels();
+  }
+}
+
+reelCards.forEach((card, index) => {
+  card.addEventListener("mouseenter", () => {
+    if (!desktopReelQuery.matches) return;
+    activeReel = index;
+    restartReel(card);
+  });
+});
+
+window.addEventListener("scroll", updateMobileReels, { passive: true });
+window.addEventListener("resize", setupReelPlayback);
+
+if (desktopReelQuery.addEventListener) {
+  desktopReelQuery.addEventListener("change", setupReelPlayback);
+}
+
+setupReelPlayback();
