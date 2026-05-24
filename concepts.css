@@ -1445,8 +1445,8 @@ footer div {
 
 .v1-polished .hero {
   background:
-    radial-gradient(circle at 80% 14%, rgba(237, 17, 29, 0.28), transparent 30%),
-    linear-gradient(90deg, rgba(7, 6, 5, 0.98), rgba(7, 6, 5, 0.78) 54%, rgba(7, 6, 5, 0.32)),
+    radial-gradient(circle at 80% 14%, rgba(237, 17, 29, 0.22), transparent 30%),
+    linear-gradient(90deg, rgba(7, 6, 5, 0.9), rgba(7, 6, 5, 0.62) 54%, rgba(7, 6, 5, 0.18)),
     url("assets/barber-chair.jpg");
   background-position: center;
   background-size: cover;
