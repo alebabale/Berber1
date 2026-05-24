@@ -46,6 +46,7 @@ updateWhatsappLink();
 const panel = document.querySelector("#whatsapp-widget");
 const openWidgetButtons = [...document.querySelectorAll("[data-open-widget]")];
 const closeWidgetButton = document.querySelector("[data-close-widget]");
+const floatingWhatsapp = document.querySelector(".floating-whatsapp");
 const widgetServiceButtons = [...document.querySelectorAll("[data-widget-service]")];
 const widgetStaffButtons = [...document.querySelectorAll("[data-widget-staff]")];
 const widgetTimeButtons = [...document.querySelectorAll("[data-widget-time]")];
@@ -122,6 +123,15 @@ if (widgetTimeInput) {
 }
 
 updateWidgetWhatsapp();
+
+function updateFloatingWhatsapp() {
+  if (!floatingWhatsapp) return;
+
+  floatingWhatsapp.classList.toggle("is-visible", window.scrollY > 360);
+}
+
+window.addEventListener("scroll", updateFloatingWhatsapp, { passive: true });
+updateFloatingWhatsapp();
 
 const gallery = document.querySelector("[data-gallery]");
 const slides = gallery ? [...gallery.querySelectorAll(".gallery-slide")] : [];
