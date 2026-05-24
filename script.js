@@ -1,0 +1,151 @@
+const baseWhatsapp =
+  "https://wa.me/4971429189666?text=Hallo%20Berber1%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen";
+
+const buttons = [...document.querySelectorAll("[data-service]")];
+const staffButtons = [...document.querySelectorAll("[data-staff]")];
+const noteInput = document.querySelector("#bookingNote");
+const whatsappButton = document.querySelector("#bookingWhatsapp");
+let selectedService = "";
+let selectedStaff = "";
+
+function updateWhatsappLink() {
+  if (!whatsappButton) return;
+
+  const parts = ["Hallo Berber1, ich m\u00f6chte einen Termin anfragen."];
+  if (selectedService) parts.push(`Leistung: ${selectedService}.`);
+  if (selectedStaff) parts.push(`Mitarbeiter: ${selectedStaff}.`);
+  if (noteInput && noteInput.value.trim()) {
+    parts.push(`Wunschtermin/Hinweis: ${noteInput.value.trim()}.`);
+  }
+
+  whatsappButton.href = `https://wa.me/4971429189666?text=${encodeURIComponent(parts.join(" "))}`;
+}
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectedService = button.dataset.service || "";
+    buttons.forEach((item) => item.classList.toggle("is-selected", item === button));
+    updateWhatsappLink();
+  });
+});
+
+staffButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectedStaff = button.dataset.staff || "";
+    staffButtons.forEach((item) => item.classList.toggle("is-selected", item === button));
+    updateWhatsappLink();
+  });
+});
+
+if (noteInput) {
+  noteInput.addEventListener("input", updateWhatsappLink);
+}
+
+updateWhatsappLink();
+
+const panel = document.querySelector("#whatsapp-widget");
+const openWidgetButtons = [...document.querySelectorAll("[data-open-widget]")];
+const closeWidgetButton = document.querySelector("[data-close-widget]");
+const widgetServiceButtons = [...document.querySelectorAll("[data-widget-service]")];
+const widgetStaffButtons = [...document.querySelectorAll("[data-widget-staff]")];
+const widgetTimeButtons = [...document.querySelectorAll("[data-widget-time]")];
+const widgetTimeInput = document.querySelector("#widgetTime");
+const widgetWhatsapp = document.querySelector("#widgetWhatsapp");
+
+let widgetService = "";
+let widgetStaff = "";
+let widgetTime = "";
+
+function setPanelOpen(isOpen) {
+  if (!panel) return;
+  panel.classList.toggle("is-open", isOpen);
+  panel.setAttribute("aria-hidden", String(!isOpen));
+}
+
+function updateWidgetWhatsapp() {
+  if (!widgetWhatsapp) return;
+
+  const customTime = widgetTimeInput && widgetTimeInput.value.trim();
+  const time = customTime || widgetTime;
+  const parts = ["Hallo Berber1, ich m\u00f6chte einen Termin anfragen."];
+  if (widgetService) parts.push(`Leistung: ${widgetService}.`);
+  if (widgetStaff) parts.push(`Mitarbeiter: ${widgetStaff}.`);
+  if (time) parts.push(`Wunschzeit: ${time}.`);
+
+  widgetWhatsapp.href = `https://wa.me/4971429189666?text=${encodeURIComponent(parts.join(" "))}`;
+}
+
+openWidgetButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    setPanelOpen(true);
+  });
+});
+
+if (closeWidgetButton) {
+  closeWidgetButton.addEventListener("click", () => setPanelOpen(false));
+}
+
+widgetServiceButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    widgetService = button.dataset.widgetService || "";
+    widgetServiceButtons.forEach((item) => item.classList.toggle("is-selected", item === button));
+    updateWidgetWhatsapp();
+  });
+});
+
+widgetStaffButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    widgetStaff = button.dataset.widgetStaff || "";
+    widgetStaffButtons.forEach((item) => item.classList.toggle("is-selected", item === button));
+    updateWidgetWhatsapp();
+  });
+});
+
+widgetTimeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    widgetTime = button.dataset.widgetTime || "";
+    widgetTimeButtons.forEach((item) => item.classList.toggle("is-selected", item === button));
+    if (widgetTimeInput) widgetTimeInput.value = "";
+    updateWidgetWhatsapp();
+  });
+});
+
+if (widgetTimeInput) {
+  widgetTimeInput.addEventListener("input", () => {
+    if (widgetTimeInput.value.trim()) {
+      widgetTime = "";
+      widgetTimeButtons.forEach((item) => item.classList.remove("is-selected"));
+    }
+    updateWidgetWhatsapp();
+  });
+}
+
+updateWidgetWhatsapp();
+
+const gallery = document.querySelector("[data-gallery]");
+const slides = gallery ? [...gallery.querySelectorAll(".gallery-slide")] : [];
+const prevGalleryButton = document.querySelector("[data-gallery-prev]");
+const nextGalleryButton = document.querySelector("[data-gallery-next]");
+const galleryCounter = document.querySelector("#galleryCounter");
+let activeSlide = 0;
+
+function showGallerySlide(index) {
+  if (!slides.length) return;
+
+  activeSlide = (index + slides.length) % slides.length;
+  slides.forEach((slide, slideIndex) => {
+    slide.classList.toggle("is-active", slideIndex === activeSlide);
+  });
+  if (galleryCounter) galleryCounter.textContent = `${activeSlide + 1} / ${slides.length}`;
+}
+
+if (prevGalleryButton) {
+  prevGalleryButton.addEventListener("click", () => showGallerySlide(activeSlide - 1));
+}
+
+if (nextGalleryButton) {
+  nextGalleryButton.addEventListener("click", () => showGallerySlide(activeSlide + 1));
+}
+
+showGallerySlide(0);
