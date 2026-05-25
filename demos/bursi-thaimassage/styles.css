@@ -1,0 +1,2077 @@
+:root {
+  --ink: #25140d;
+  --deep: #190d09;
+  --red: #9b1f1e;
+  --red-soft: #c83b35;
+  --gold: #d9a947;
+  --gold-soft: #ffe2a0;
+  --rose: #f6d2c4;
+  --cream: #fff6e5;
+  --paper: #fffaf0;
+  --leaf: #2e6d48;
+  --muted: rgba(255, 246, 229, 0.74);
+  --line: rgba(255, 246, 229, 0.16);
+  --dark-line: rgba(37, 20, 13, 0.13);
+  --shadow: 0 34px 100px rgba(25, 13, 9, 0.32);
+}
+
+/* Gutschein-inspiriertes Bursi-Theme: rosa Logo, babyblau, Bambusgruen */
+:root {
+  --ink: #183536;
+  --deep: #123234;
+  --red: #e86a9a;
+  --red-soft: #ffd1e4;
+  --gold: #3f8f5b;
+  --gold-soft: #cfe8cf;
+  --rose: #ffd1e4;
+  --cream: #fff8ef;
+  --paper: #f3fbff;
+  --leaf: #3f8f5b;
+  --muted: rgba(255, 248, 239, 0.78);
+  --line: rgba(255, 209, 228, 0.22);
+  --dark-line: rgba(24, 53, 54, 0.13);
+  --shadow: 0 34px 100px rgba(18, 50, 52, 0.24);
+}
+
+body {
+  background:
+    linear-gradient(180deg, #dff5ff, #f7fcff 42%, #e7f6ec);
+}
+
+.site-header,
+.booking-panel,
+.mobile-section-menu {
+  border-color: rgba(255, 209, 228, 0.24);
+  background: rgba(18, 50, 52, 0.9);
+}
+
+.brand-mark {
+  color: #fff;
+  border-color: rgba(255, 209, 228, 0.86);
+  background: radial-gradient(circle at 50% 28%, #ffd1e4, #e86a9a 70%);
+  box-shadow: 0 18px 48px rgba(232, 106, 154, 0.26);
+}
+
+.btn-red,
+.header-cta,
+.floating-booking,
+.mobile-action-bar button {
+  color: #fff;
+  background: linear-gradient(135deg, #ffd1e4, #e86a9a);
+  box-shadow: 0 18px 52px rgba(232, 106, 154, 0.26);
+}
+
+.btn-gold,
+.mobile-action-bar a {
+  color: #123234;
+  background: linear-gradient(135deg, #dff5ff, #cfe8cf, #77bd82);
+  box-shadow: 0 18px 52px rgba(63, 143, 91, 0.18);
+}
+
+.btn-outline {
+  border-color: rgba(255, 209, 228, 0.28);
+  background: rgba(207, 239, 255, 0.12);
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(18, 50, 52, 0.92), rgba(18, 50, 52, 0.62) 58%, rgba(207, 239, 255, 0.2)),
+    url("assets/interior-quiet.jpg");
+}
+
+.eyebrow,
+.hero-card-body strong,
+.location-card strong,
+.panel-jump,
+.flow-steps span {
+  color: #ffd1e4;
+}
+
+.hero-proof span,
+.quick-slots button,
+.flow-steps article,
+.booking-panel,
+.mobile-action-bar {
+  border-color: rgba(255, 209, 228, 0.24);
+}
+
+.hero-proof span,
+.quick-slots button,
+.flow-steps article {
+  background: rgba(207, 239, 255, 0.12);
+}
+
+.hero-card,
+.location-card {
+  border-color: rgba(255, 209, 228, 0.32);
+  background: rgba(18, 50, 52, 0.86);
+}
+
+.status-pill,
+.flow-steps em,
+.mobile-section-toggle[aria-expanded="true"] {
+  color: #123234;
+  background: linear-gradient(135deg, #dff5ff, #cfe8cf);
+}
+
+.booking-flow {
+  background:
+    linear-gradient(135deg, rgba(18, 50, 52, 0.96), rgba(63, 143, 91, 0.82)),
+    radial-gradient(circle at 88% 18%, rgba(255, 209, 228, 0.36), transparent 36%);
+}
+
+.trust-section,
+.faq-section {
+  background:
+    linear-gradient(135deg, #edfaff, #f9fbff 48%, #e2f5e6);
+}
+
+.services-section,
+.booking-section,
+.gallery-section {
+  background: #f3fbff;
+}
+
+.trust-section span,
+.service-grid span,
+.price-grid span,
+.booking-group > span,
+.booking-card label span,
+.gallery-section .eyebrow,
+.inline-action,
+.quick-slots button.inline-action {
+  color: #e86a9a;
+}
+
+.trust-section article,
+.service-grid article,
+.price-grid article,
+details,
+.booking-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(24, 53, 54, 0.12);
+}
+
+.price-section {
+  background:
+    linear-gradient(135deg, rgba(18, 50, 52, 0.9), rgba(63, 143, 91, 0.66)),
+    url("assets/practice-detail-01.jpg");
+}
+
+.booking-section {
+  background:
+    linear-gradient(135deg, rgba(237, 250, 255, 0.96), rgba(207, 232, 207, 0.88)),
+    url("assets/practice-room-03.jpg");
+}
+
+.location-section {
+  background:
+    linear-gradient(135deg, rgba(237, 250, 255, 0.96), rgba(207, 232, 207, 0.84)),
+    url("assets/practice-detail-02.jpg");
+}
+
+.option-grid button {
+  background: rgba(237, 250, 255, 0.82);
+}
+
+.option-grid button.is-selected {
+  color: #123234;
+  border-color: rgba(232, 106, 154, 0.62);
+  background: linear-gradient(135deg, #ffd1e4, #dff5ff);
+}
+
+.booking-summary {
+  border-color: rgba(232, 106, 154, 0.24);
+  background: linear-gradient(135deg, rgba(255, 209, 228, 0.45), rgba(207, 239, 255, 0.55));
+}
+
+.mobile-action-bar {
+  background: rgba(18, 50, 52, 0.92);
+}
+
+@media (max-width: 979px) {
+  .mobile-section-toggle {
+    border-color: rgba(255, 209, 228, 0.28);
+    background: rgba(207, 239, 255, 0.12);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--cream);
+  background: var(--deep);
+  font-family: Manrope, system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px clamp(18px, 5vw, 72px);
+  border-bottom: 1px solid rgba(255, 246, 229, 0.1);
+  background: rgba(25, 13, 9, 0.82);
+  backdrop-filter: blur(18px);
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 96px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(217, 169, 71, 0.52);
+  border-radius: 999px;
+  color: var(--gold-soft);
+  background: radial-gradient(circle at 50% 28%, rgba(217, 169, 71, 0.24), rgba(25, 13, 9, 0.9));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 0.94;
+  text-align: center;
+}
+
+nav {
+  display: none;
+  gap: 24px;
+  color: rgba(255, 246, 229, 0.76);
+  font-weight: 900;
+}
+
+.mobile-section-toggle,
+.mobile-section-menu {
+  display: none;
+}
+
+.header-cta,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 56px;
+  border: 0;
+  border-radius: 999px;
+  padding: 15px 22px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.btn::after,
+.header-cta::after {
+  content: "->";
+}
+
+.btn-red,
+.header-cta {
+  color: #fff;
+  background: linear-gradient(135deg, var(--red-soft), var(--red));
+  box-shadow: 0 18px 52px rgba(155, 31, 30, 0.28);
+}
+
+.btn-gold {
+  color: #211108;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  box-shadow: 0 18px 52px rgba(217, 169, 71, 0.24);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 246, 229, 0.2);
+  color: var(--cream);
+  background: rgba(255, 246, 229, 0.08);
+}
+
+.btn-outline.dark {
+  border-color: rgba(37, 20, 13, 0.16);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.hero {
+  min-height: 100svh;
+  display: grid;
+  gap: 34px;
+  align-items: end;
+  padding: 132px clamp(22px, 6vw, 88px) 58px;
+  background:
+    linear-gradient(90deg, rgba(25, 13, 9, 0.96), rgba(25, 13, 9, 0.68) 58%, rgba(25, 13, 9, 0.22)),
+    url("assets/interior-quiet.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-copy {
+  max-width: 900px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 950;
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 22px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 920px;
+  font-size: clamp(3.15rem, 8vw, 7.4rem);
+}
+
+h2 {
+  font-size: clamp(2.3rem, 5.6vw, 5.1rem);
+}
+
+.hero-copy p:not(.eyebrow) {
+  max-width: 700px;
+  color: rgba(255, 246, 229, 0.8);
+  font-size: clamp(1.04rem, 2vw, 1.28rem);
+  font-weight: 720;
+}
+
+.hero-copy strong {
+  color: #fffaf0;
+}
+
+.hero-actions,
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-proof {
+  margin-top: 18px;
+}
+
+.hero-proof span {
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 246, 229, 0.16);
+  border-radius: 999px;
+  color: rgba(255, 246, 229, 0.84);
+  background: rgba(255, 246, 229, 0.08);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.hero-card {
+  overflow: hidden;
+  width: min(400px, 100%);
+  border: 1px solid rgba(217, 169, 71, 0.3);
+  border-radius: 34px;
+  background: rgba(25, 13, 9, 0.76);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.hero-card-body {
+  display: grid;
+  gap: 6px;
+  padding: 22px;
+  color: rgba(255, 246, 229, 0.86);
+  font-weight: 850;
+}
+
+.hero-card-body strong {
+  color: var(--gold-soft);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
+.status-pill {
+  width: fit-content;
+  margin-bottom: 6px;
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #211108;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+section {
+  padding: clamp(78px, 12vw, 144px) clamp(22px, 6vw, 88px);
+}
+
+.booking-flow {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(217, 169, 71, 0.22), transparent 34%),
+    #160b08;
+}
+
+.flow-copy p:not(.eyebrow) {
+  max-width: 720px;
+  color: rgba(255, 246, 229, 0.72);
+  font-weight: 740;
+}
+
+.quick-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.quick-slots button,
+.inline-action {
+  border: 0;
+  color: var(--red);
+  background: transparent;
+  font: inherit;
+  font-weight: 950;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.quick-slots button {
+  min-height: 48px;
+  border: 1px solid rgba(255, 246, 229, 0.16);
+  border-radius: 999px;
+  padding: 12px 16px;
+  color: var(--cream);
+  background: rgba(255, 246, 229, 0.08);
+}
+
+.flow-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.flow-steps article {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid rgba(255, 246, 229, 0.14);
+  border-radius: 24px;
+  background: rgba(255, 246, 229, 0.08);
+}
+
+.flow-steps span {
+  color: var(--gold-soft);
+  font-weight: 950;
+}
+
+.flow-steps p {
+  margin: 3px 0 0;
+  color: rgba(255, 246, 229, 0.68);
+  font-weight: 760;
+}
+
+.flow-steps em {
+  color: #211108;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.trust-section {
+  display: grid;
+  gap: 16px;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.trust-section article,
+.service-grid article,
+.price-grid article {
+  padding: 26px;
+  border: 1px solid var(--dark-line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.trust-section span,
+.service-grid span,
+.price-grid span,
+.gallery-section .eyebrow {
+  color: #9a251f;
+  font-size: 0.74rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.trust-section p,
+.service-grid p,
+.price-grid p,
+.booking-section p,
+.location-section p {
+  color: rgba(37, 20, 13, 0.68);
+  font-weight: 730;
+}
+
+.image-mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+}
+
+.image-mosaic img {
+  width: 100%;
+  height: clamp(190px, 28vw, 360px);
+  object-fit: cover;
+}
+
+.services-section,
+.booking-section,
+.gallery-section,
+.faq-section {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.section-heading {
+  max-width: 920px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.service-layout,
+.booking-section,
+.location-section {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+}
+
+.service-layout {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.service-grid,
+.price-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.service-image {
+  overflow: hidden;
+  margin: 0;
+  border-radius: 30px;
+  box-shadow: 0 28px 80px rgba(37, 20, 13, 0.16);
+}
+
+.service-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.price-section {
+  color: var(--cream);
+  background:
+    linear-gradient(135deg, rgba(25, 13, 9, 0.95), rgba(25, 13, 9, 0.72)),
+    url("assets/practice-detail-01.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.price-grid article {
+  display: grid;
+  gap: 10px;
+  color: var(--ink);
+}
+
+.price-grid article strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.booking-section {
+  background:
+    linear-gradient(135deg, rgba(255, 250, 240, 0.96), rgba(255, 246, 229, 0.9)),
+    url("assets/practice-room-03.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.booking-card {
+  display: grid;
+  gap: 14px;
+  padding: clamp(22px, 5vw, 34px);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 30px 90px rgba(37, 20, 13, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.booking-card > strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.booking-group,
+.booking-card label {
+  display: grid;
+  gap: 9px;
+}
+
+.booking-group > span,
+.booking-card label span {
+  color: #9a251f;
+  font-size: 0.74rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.option-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.option-grid button {
+  min-height: 50px;
+  border: 1px solid var(--dark-line);
+  border-radius: 16px;
+  color: var(--ink);
+  background: rgba(255, 246, 229, 0.72);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.option-grid button.is-selected {
+  color: #211108;
+  border-color: rgba(217, 169, 71, 0.86);
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+}
+
+.booking-card input {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid var(--dark-line);
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: var(--ink);
+  background: #fff;
+  font-weight: 750;
+}
+
+.booking-summary {
+  min-height: 86px;
+  border: 1px solid rgba(155, 31, 30, 0.18);
+  border-radius: 18px;
+  padding: 14px;
+  color: var(--ink);
+  background: rgba(246, 210, 196, 0.42);
+  font-weight: 800;
+}
+
+.booking-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 26px;
+  object-fit: cover;
+  box-shadow: 0 24px 70px rgba(37, 20, 13, 0.1);
+}
+
+.location-section {
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(255, 246, 229, 0.96), rgba(246, 210, 196, 0.82)),
+    url("assets/practice-detail-02.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.location-card {
+  overflow: hidden;
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(37, 20, 13, 0.12);
+  border-radius: 30px;
+  color: var(--cream);
+  background: rgba(25, 13, 9, 0.86);
+  box-shadow: 0 28px 80px rgba(37, 20, 13, 0.22);
+}
+
+.location-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.location-card strong,
+.location-card span {
+  margin-inline: 24px;
+}
+
+.location-card strong {
+  color: var(--gold-soft);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.location-card span:last-child {
+  margin-bottom: 24px;
+}
+
+.faq-section {
+  background: var(--cream);
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+details {
+  padding: 20px;
+  border: 1px solid var(--dark-line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+summary {
+  cursor: pointer;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+details p {
+  margin: 12px 0 0;
+  color: rgba(37, 20, 13, 0.68);
+  font-weight: 750;
+}
+
+.booking-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 92px;
+  z-index: 45;
+  display: grid;
+  gap: 16px;
+  width: min(390px, calc(100vw - 28px));
+  padding: 24px;
+  border: 1px solid rgba(255, 246, 229, 0.16);
+  border-radius: 30px;
+  color: var(--cream);
+  background: rgba(25, 13, 9, 0.94);
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.48);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(18px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  backdrop-filter: blur(18px);
+}
+
+.booking-panel.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.booking-panel strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.08;
+}
+
+.panel-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 246, 229, 0.16);
+  border-radius: 999px;
+  color: var(--cream);
+  background: rgba(255, 246, 229, 0.08);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.panel-jump {
+  width: fit-content;
+  border: 0;
+  color: var(--gold-soft);
+  background: transparent;
+  font-weight: 950;
+  cursor: pointer;
+  padding: 0;
+}
+
+.floating-booking {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  min-height: 58px;
+  border: 0;
+  border-radius: 999px;
+  padding: 16px 22px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--red-soft), var(--red));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  font-weight: 950;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.floating-booking.is-visible,
+.floating-booking.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-action-bar {
+  display: none;
+}
+
+@media (min-width: 980px) {
+  nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 760px) {
+  .hero,
+  .booking-flow,
+  .service-layout,
+  .booking-section,
+  .location-section {
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  }
+
+  .trust-section {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .service-grid,
+  .price-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .price-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 979px) {
+  .mobile-section-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-left: auto;
+    border: 1px solid rgba(255, 246, 229, 0.16);
+    border-radius: 999px;
+    padding: 10px 14px;
+    color: var(--cream);
+    background: rgba(255, 246, 229, 0.08);
+    font-weight: 950;
+    cursor: pointer;
+  }
+
+  .mobile-section-toggle[aria-expanded="true"] {
+    color: #211108;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  }
+
+  .mobile-section-menu {
+    position: fixed;
+    right: 14px;
+    top: 86px;
+    left: 14px;
+    z-index: 25;
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid rgba(255, 246, 229, 0.16);
+    border-radius: 24px;
+    background: rgba(25, 13, 9, 0.94);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+
+  .mobile-section-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-section-menu a {
+    padding: 13px 14px;
+    border-radius: 16px;
+    color: rgba(255, 246, 229, 0.84);
+    background: rgba(255, 246, 229, 0.08);
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 759px) {
+  body {
+    padding-bottom: 74px;
+  }
+
+  .site-header {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 10px 14px;
+    overflow: visible;
+  }
+
+  .brand-mark {
+    width: 74px;
+    font-size: 0.9rem;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 116px 24px 62px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 13vw, 4.4rem);
+  }
+
+  .hero-actions {
+    display: grid;
+  }
+
+  .hero-copy p:not(.eyebrow) {
+    max-width: min(22rem, 100%);
+  }
+
+  .hero-proof {
+    display: grid;
+  }
+
+  .hero-proof span {
+    width: fit-content;
+  }
+
+  .hero-card {
+    display: none;
+  }
+
+  .flow-steps article {
+    grid-template-columns: auto 1fr;
+  }
+
+  .flow-steps em {
+    justify-self: start;
+    grid-column: 2;
+  }
+
+  .image-mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .image-mosaic img {
+    height: 170px;
+  }
+
+  .option-grid,
+  .option-grid.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .booking-panel {
+    right: 12px;
+    bottom: 86px;
+    left: 12px;
+    width: auto;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .floating-booking {
+    display: none;
+  }
+
+  .mobile-action-bar {
+    position: fixed;
+    right: 14px;
+    bottom: 12px;
+    left: 14px;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 246, 229, 0.16);
+    border-radius: 999px;
+    background: rgba(25, 13, 9, 0.92);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(14px);
+  }
+
+  .mobile-action-bar a,
+  .mobile-action-bar button {
+    display: grid;
+    min-height: 48px;
+    place-items: center;
+    border: 0;
+    border-radius: 999px;
+    color: #211108;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+    font-weight: 950;
+    cursor: pointer;
+  }
+
+  .mobile-action-bar button {
+    color: #fff;
+    background: linear-gradient(135deg, var(--red-soft), var(--red));
+  }
+
+  .mobile-action-bar a:last-child {
+    color: var(--cream);
+    border: 1px solid rgba(255, 246, 229, 0.18);
+    background: rgba(255, 246, 229, 0.08);
+  }
+}
+
+/* Finaler Marken-Override nach allen Layout-Regeln */
+:root {
+  --ink: #183536;
+  --deep: #123234;
+  --red: #e86a9a;
+  --red-soft: #ffd1e4;
+  --gold: #3f8f5b;
+  --gold-soft: #cfe8cf;
+  --rose: #ffd1e4;
+  --cream: #fff8ef;
+  --paper: #f3fbff;
+  --leaf: #3f8f5b;
+  --muted: rgba(255, 248, 239, 0.78);
+  --line: rgba(255, 209, 228, 0.22);
+  --dark-line: rgba(24, 53, 54, 0.13);
+  --shadow: 0 34px 100px rgba(18, 50, 52, 0.24);
+}
+
+body {
+  background: linear-gradient(180deg, #dff5ff, #f7fcff 42%, #e7f6ec);
+}
+
+.site-header,
+.booking-panel,
+.mobile-section-menu {
+  border-color: rgba(255, 209, 228, 0.24);
+  background: rgba(18, 50, 52, 0.9);
+}
+
+.brand-mark {
+  color: #fff;
+  border-color: rgba(255, 209, 228, 0.86);
+  background: radial-gradient(circle at 50% 28%, #ffd1e4, #e86a9a 70%);
+  box-shadow: 0 18px 48px rgba(232, 106, 154, 0.26);
+}
+
+.btn-red,
+.header-cta,
+.floating-booking,
+.mobile-action-bar button {
+  color: #fff;
+  background: linear-gradient(135deg, #ffd1e4, #e86a9a);
+  box-shadow: 0 18px 52px rgba(232, 106, 154, 0.26);
+}
+
+.btn-gold,
+.mobile-action-bar a {
+  color: #123234;
+  background: linear-gradient(135deg, #dff5ff, #cfe8cf, #77bd82);
+  box-shadow: 0 18px 52px rgba(63, 143, 91, 0.18);
+}
+
+.btn-outline {
+  border-color: rgba(255, 209, 228, 0.28);
+  background: rgba(207, 239, 255, 0.12);
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(18, 50, 52, 0.92), rgba(18, 50, 52, 0.62) 58%, rgba(207, 239, 255, 0.2)),
+    url("assets/interior-quiet.jpg");
+}
+
+.eyebrow,
+.hero-card-body strong,
+.location-card strong,
+.panel-jump,
+.flow-steps span {
+  color: #ffd1e4;
+}
+
+.hero-proof span,
+.quick-slots button,
+.flow-steps article,
+.booking-panel,
+.mobile-action-bar {
+  border-color: rgba(255, 209, 228, 0.24);
+}
+
+.hero-proof span,
+.quick-slots button,
+.flow-steps article {
+  background: rgba(207, 239, 255, 0.12);
+}
+
+.hero-card,
+.location-card {
+  border-color: rgba(255, 209, 228, 0.32);
+  background: rgba(18, 50, 52, 0.86);
+}
+
+.status-pill,
+.flow-steps em,
+.mobile-section-toggle[aria-expanded="true"] {
+  color: #123234;
+  background: linear-gradient(135deg, #dff5ff, #cfe8cf);
+}
+
+.booking-flow {
+  background:
+    linear-gradient(135deg, rgba(18, 50, 52, 0.96), rgba(63, 143, 91, 0.82)),
+    radial-gradient(circle at 88% 18%, rgba(255, 209, 228, 0.36), transparent 36%);
+}
+
+.trust-section,
+.faq-section {
+  background: linear-gradient(135deg, #edfaff, #f9fbff 48%, #e2f5e6);
+}
+
+.services-section,
+.booking-section,
+.gallery-section {
+  background: #f3fbff;
+}
+
+.trust-section span,
+.service-grid span,
+.price-grid span,
+.booking-group > span,
+.booking-card label span,
+.gallery-section .eyebrow,
+.inline-action {
+  color: #e86a9a;
+}
+
+.trust-section article,
+.service-grid article,
+.price-grid article,
+details,
+.booking-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(24, 53, 54, 0.12);
+}
+
+.price-section {
+  background:
+    linear-gradient(135deg, rgba(18, 50, 52, 0.9), rgba(63, 143, 91, 0.66)),
+    url("assets/practice-detail-01.jpg");
+}
+
+.booking-section {
+  background:
+    linear-gradient(135deg, rgba(237, 250, 255, 0.96), rgba(207, 232, 207, 0.88)),
+    url("assets/practice-room-03.jpg");
+}
+
+.location-section {
+  background:
+    linear-gradient(135deg, rgba(237, 250, 255, 0.96), rgba(207, 232, 207, 0.84)),
+    url("assets/practice-detail-02.jpg");
+}
+
+.option-grid button {
+  background: rgba(237, 250, 255, 0.82);
+}
+
+.option-grid button.is-selected {
+  color: #123234;
+  border-color: rgba(232, 106, 154, 0.62);
+  background: linear-gradient(135deg, #ffd1e4, #dff5ff);
+}
+
+.booking-summary {
+  border-color: rgba(232, 106, 154, 0.24);
+  background: linear-gradient(135deg, rgba(255, 209, 228, 0.45), rgba(207, 239, 255, 0.55));
+}
+
+.mobile-section-toggle {
+  border-color: rgba(255, 209, 228, 0.28);
+  background: rgba(207, 239, 255, 0.12);
+}
+
+.mobile-action-bar {
+  border-color: rgba(255, 209, 228, 0.24);
+  background: rgba(18, 50, 52, 0.92);
+}
+
+.mobile-action-bar a:last-child {
+  color: var(--cream);
+  border-color: rgba(255, 209, 228, 0.28);
+  background: rgba(207, 239, 255, 0.12);
+}
+
+/* Gutscheinmotiv in der Kopfleiste und feinere Markenpalette */
+:root {
+  --ink: #12373a;
+  --deep: #0d3336;
+  --red: #ec2ea3;
+  --red-soft: #ff8fd2;
+  --gold: #2e9f55;
+  --gold-soft: #c7efc7;
+  --cream: #fff8f3;
+  --paper: #eefaff;
+  --dark-line: rgba(18, 55, 58, 0.13);
+  --shadow: 0 34px 100px rgba(13, 51, 54, 0.24);
+}
+
+.site-header {
+  isolation: isolate;
+  overflow: hidden;
+  border-color: rgba(236, 46, 163, 0.22);
+  background:
+    linear-gradient(90deg, rgba(13, 51, 54, 0.94), rgba(13, 51, 54, 0.78) 56%, rgba(147, 217, 232, 0.34)),
+    url("assets/brand-emotionheader.jpg");
+  background-position: left center;
+  background-size: cover;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(13, 51, 54, 0.78), rgba(13, 51, 54, 0.58)),
+    rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+}
+
+.brand-mark {
+  color: #fff;
+  border-color: rgba(255, 143, 210, 0.82);
+  background: radial-gradient(circle at 45% 25%, #ffb8df, #ec2ea3 68%);
+}
+
+.btn-red,
+.header-cta,
+.floating-booking,
+.mobile-action-bar button {
+  background: linear-gradient(135deg, #ff8fd2, #ec2ea3);
+}
+
+.btn-gold,
+.mobile-action-bar a {
+  background: linear-gradient(135deg, #dff8ff, #c7efc7, #63bf74);
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(13, 51, 54, 0.9), rgba(13, 51, 54, 0.62) 58%, rgba(207, 239, 255, 0.2)),
+    url("assets/interior-quiet.jpg");
+}
+
+.eyebrow,
+.hero-card-body strong,
+.location-card strong,
+.panel-jump,
+.flow-steps span {
+  color: #ff8fd2;
+}
+
+.booking-flow {
+  background:
+    linear-gradient(135deg, rgba(13, 51, 54, 0.96), rgba(46, 159, 85, 0.78)),
+    radial-gradient(circle at 88% 18%, rgba(236, 46, 163, 0.28), transparent 36%);
+}
+
+.trust-section,
+.faq-section {
+  background:
+    linear-gradient(135deg, #e2f8ff, #f7fdff 44%, #dff4df);
+}
+
+.price-section {
+  background:
+    linear-gradient(135deg, rgba(13, 51, 54, 0.88), rgba(46, 159, 85, 0.64)),
+    url("assets/practice-detail-01.jpg");
+}
+
+.booking-section,
+.location-section {
+  background-color: #eefaff;
+}
+
+.trust-section span,
+.service-grid span,
+.price-grid span,
+.booking-group > span,
+.booking-card label span,
+.gallery-section .eyebrow,
+.inline-action {
+  color: #ec2ea3;
+}
+
+.option-grid button.is-selected {
+  border-color: rgba(236, 46, 163, 0.54);
+  background: linear-gradient(135deg, #ffd6ec, #dff8ff);
+}
+
+.mobile-section-menu {
+  background:
+    linear-gradient(90deg, rgba(13, 51, 54, 0.94), rgba(13, 51, 54, 0.84)),
+    url("assets/brand-emotionheader.jpg");
+  background-position: left center;
+  background-size: cover;
+}
+
+@media (max-width: 759px) {
+  .site-header {
+    background-position: left center;
+  }
+}
+
+.voucher-section {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.82fr) minmax(320px, 0.95fr);
+  gap: clamp(18px, 3vw, 34px);
+  align-items: center;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 9% 18%, rgba(236, 46, 163, 0.2), transparent 28%),
+    radial-gradient(circle at 86% 10%, rgba(99, 191, 116, 0.22), transparent 32%),
+    linear-gradient(135deg, #e1f8ff, #fff7fc 47%, #dcf4df);
+}
+
+.voucher-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(105deg, transparent 0 68%, rgba(46, 159, 85, 0.13) 68% 70%, transparent 70%),
+    linear-gradient(108deg, transparent 0 74%, rgba(46, 159, 85, 0.11) 74% 76%, transparent 76%);
+}
+
+.voucher-copy,
+.voucher-visual,
+.voucher-card {
+  position: relative;
+  z-index: 1;
+}
+
+.voucher-copy p:not(.eyebrow) {
+  color: rgba(18, 55, 58, 0.72);
+  font-weight: 780;
+}
+
+.voucher-benefits {
+  display: grid;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.voucher-benefits span {
+  width: fit-content;
+  border: 1px solid rgba(236, 46, 163, 0.17);
+  border-radius: 999px;
+  padding: 9px 13px;
+  color: #12373a;
+  background: rgba(255, 255, 255, 0.66);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.voucher-visual {
+  display: grid;
+  gap: 14px;
+}
+
+.voucher-visual img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 10px solid rgba(255, 255, 255, 0.62);
+  border-radius: 26px;
+  object-fit: cover;
+  box-shadow: 0 30px 90px rgba(18, 55, 58, 0.2);
+  transform: rotate(-1.4deg);
+}
+
+.voucher-ticket {
+  display: grid;
+  gap: 4px;
+  max-width: 86%;
+  margin: -56px auto 0;
+  border: 1px solid rgba(236, 46, 163, 0.16);
+  border-radius: 22px;
+  padding: 18px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(236, 46, 163, 0.94), rgba(255, 143, 210, 0.9)),
+    url("assets/brand-emotionheader.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 22px 70px rgba(236, 46, 163, 0.18);
+}
+
+.voucher-ticket span,
+.voucher-ticket small {
+  font-weight: 850;
+  opacity: 0.88;
+}
+
+.voucher-ticket strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.voucher-card {
+  display: grid;
+  gap: 14px;
+  border: 1px solid rgba(18, 55, 58, 0.12);
+  border-radius: 30px;
+  padding: clamp(20px, 3vw, 30px);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 28px 80px rgba(18, 55, 58, 0.14);
+  backdrop-filter: blur(14px);
+}
+
+.voucher-card > strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+  line-height: 1;
+}
+
+.voucher-group,
+.voucher-card label {
+  display: grid;
+  gap: 9px;
+}
+
+.voucher-group > span,
+.voucher-card label span {
+  color: #ec2ea3;
+  font-size: 0.74rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.voucher-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.voucher-options.service {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.voucher-options button {
+  min-height: 48px;
+  border: 1px solid rgba(18, 55, 58, 0.12);
+  border-radius: 16px;
+  color: var(--ink);
+  background: rgba(238, 250, 255, 0.82);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.voucher-options button.is-selected {
+  color: #12373a;
+  border-color: rgba(236, 46, 163, 0.58);
+  background: linear-gradient(135deg, #ffd6ec, #dff8ff 54%, #c7efc7);
+  box-shadow: 0 14px 34px rgba(236, 46, 163, 0.14);
+}
+
+.voucher-card input {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid rgba(18, 55, 58, 0.12);
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: var(--ink);
+  background: #fff;
+  font-weight: 780;
+}
+
+.voucher-summary {
+  min-height: 82px;
+  border: 1px solid rgba(236, 46, 163, 0.22);
+  border-radius: 18px;
+  padding: 14px;
+  color: var(--ink);
+  background: linear-gradient(135deg, rgba(255, 214, 236, 0.72), rgba(223, 248, 255, 0.72));
+  font-weight: 850;
+}
+
+.voucher-actions {
+  display: grid;
+  gap: 10px;
+}
+
+@media (max-width: 1120px) {
+  .voucher-section {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  }
+
+  .voucher-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 759px) {
+  .voucher-section {
+    grid-template-columns: 1fr;
+    padding-inline: 20px;
+  }
+
+  .voucher-visual {
+    order: -1;
+  }
+
+  .voucher-visual img {
+    border-width: 6px;
+    border-radius: 22px;
+    transform: none;
+  }
+
+  .voucher-ticket {
+    max-width: 94%;
+    margin-top: -42px;
+  }
+
+  .voucher-options,
+  .voucher-options.service {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mobile-action-bar {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+    padding: 8px;
+  }
+
+  .mobile-action-bar a,
+  .mobile-action-bar button {
+    min-height: 46px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Neue Bursi-Conversion-Seite: alles fuehrt zu Termin/Gutschein + WhatsApp */
+:root {
+  --whatsapp: #19b96f;
+  --whatsapp-dark: #0f8f55;
+}
+
+.btn-whatsapp {
+  color: #fff;
+  background: linear-gradient(135deg, #42df91, var(--whatsapp), var(--whatsapp-dark));
+  box-shadow: 0 18px 52px rgba(25, 185, 111, 0.24);
+}
+
+.anchor-offset {
+  display: block;
+  height: 0;
+  scroll-margin-top: 116px;
+}
+
+.choice-section {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.74fr) minmax(320px, 1fr);
+  gap: clamp(18px, 3vw, 34px);
+  align-items: start;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(236, 46, 163, 0.2), transparent 30%),
+    radial-gradient(circle at 88% 4%, rgba(25, 185, 111, 0.2), transparent 32%),
+    linear-gradient(135deg, #e1f8ff, #fff7fc 48%, #e0f5e2);
+}
+
+.choice-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(106deg, transparent 0 64%, rgba(46, 159, 85, 0.13) 64% 66%, transparent 66%),
+    linear-gradient(109deg, transparent 0 72%, rgba(46, 159, 85, 0.1) 72% 74%, transparent 74%);
+}
+
+.choice-intro,
+.choice-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.choice-intro {
+  position: sticky;
+  top: 116px;
+  display: grid;
+  gap: 18px;
+}
+
+.choice-intro p:not(.eyebrow) {
+  color: rgba(18, 55, 58, 0.72);
+  font-weight: 780;
+}
+
+.choice-tabs,
+.panel-choice {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.choice-tab,
+.panel-choice button {
+  min-height: 58px;
+  border: 1px solid rgba(18, 55, 58, 0.12);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.74);
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.choice-tab.is-selected,
+.panel-choice button:hover {
+  color: #fff;
+  border-color: rgba(236, 46, 163, 0.36);
+  background: linear-gradient(135deg, #ff8fd2, #ec2ea3);
+  box-shadow: 0 18px 52px rgba(236, 46, 163, 0.18);
+}
+
+.choice-panel {
+  display: none;
+}
+
+.choice-panel.is-active {
+  display: grid;
+}
+
+.choice-section .booking-card,
+.choice-section .voucher-card {
+  width: 100%;
+  min-height: 100%;
+  border-radius: 32px;
+}
+
+.clean-voucher-preview {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 16px;
+  margin-bottom: 4px;
+  border: 1px solid rgba(236, 46, 163, 0.18);
+  border-radius: 26px;
+  padding: clamp(22px, 4vw, 34px);
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 214, 236, 0.72)),
+    url("assets/brand-emotionheader.jpg");
+  background-position: left center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+}
+
+.clean-voucher-preview::after {
+  content: "";
+  position: absolute;
+  inset: auto -12% -18% 46%;
+  height: 160px;
+  border-radius: 999px;
+  background: rgba(46, 159, 85, 0.16);
+  transform: rotate(-9deg);
+}
+
+.clean-voucher-preview span,
+.clean-voucher-preview small {
+  position: relative;
+  z-index: 1;
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+}
+
+.clean-voucher-preview strong {
+  position: relative;
+  z-index: 1;
+  color: #ec2ea3;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.95;
+}
+
+.voucher-lines {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+}
+
+.voucher-lines em {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: rgba(18, 55, 58, 0.82);
+  background: rgba(255, 255, 255, 0.66);
+  font-style: normal;
+  font-weight: 850;
+}
+
+.whatsapp-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 92px;
+  z-index: 45;
+  display: grid;
+  gap: 16px;
+  width: min(410px, calc(100vw - 28px));
+  padding: 24px;
+  border: 1px solid rgba(255, 209, 228, 0.24);
+  border-radius: 30px;
+  color: var(--cream);
+  background:
+    linear-gradient(135deg, rgba(13, 51, 54, 0.96), rgba(13, 51, 54, 0.86)),
+    url("assets/brand-emotionheader.jpg");
+  background-position: left center;
+  background-size: cover;
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(18px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  backdrop-filter: blur(18px);
+}
+
+.whatsapp-panel.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.whatsapp-panel strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.08;
+}
+
+.whatsapp-panel .btn {
+  width: 100%;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 24px;
+  z-index: 42;
+  min-height: 58px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 24px;
+  color: #fff;
+  background: linear-gradient(135deg, #42df91, var(--whatsapp), var(--whatsapp-dark));
+  box-shadow: 0 18px 52px rgba(25, 185, 111, 0.28);
+  font-weight: 950;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.floating-whatsapp.is-visible,
+.floating-whatsapp.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-action-bar button:nth-child(3) {
+  color: #fff;
+  background: linear-gradient(135deg, #42df91, var(--whatsapp), var(--whatsapp-dark));
+  box-shadow: 0 12px 30px rgba(25, 185, 111, 0.24);
+}
+
+@media (max-width: 979px) {
+  .choice-section {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 759px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-copy {
+    max-width: calc(100vw - 48px);
+  }
+
+  h1 {
+    max-width: 8.8ch;
+    font-size: clamp(2.7rem, 10.5vw, 3.45rem);
+    overflow-wrap: normal;
+  }
+
+  .hero-copy p:not(.eyebrow) {
+    max-width: 30ch;
+    overflow-wrap: break-word;
+  }
+
+  .hero-actions .btn {
+    width: min(100%, 342px);
+    min-width: 0;
+  }
+
+  .hero-actions .btn:not(:first-child) {
+    display: none;
+  }
+
+  .hero {
+    padding-bottom: 128px;
+  }
+
+  .choice-section {
+    padding-inline: 20px;
+  }
+
+  .choice-tabs,
+  .panel-choice {
+    grid-template-columns: 1fr;
+  }
+
+  .clean-voucher-preview {
+    padding: 22px;
+  }
+
+  .whatsapp-panel {
+    right: 12px;
+    bottom: 86px;
+    left: 12px;
+    width: auto;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .floating-whatsapp {
+    display: none;
+  }
+
+  .mobile-action-bar a:last-child {
+    color: #123234;
+    border: 0;
+    background: linear-gradient(135deg, #dff8ff, #c7efc7, #63bf74);
+  }
+
+  .mobile-action-bar {
+    right: 12px;
+    left: 12px;
+    width: min(calc(100vw - 24px), 366px);
+    margin-inline: auto;
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .mobile-action-bar a,
+  .mobile-action-bar button {
+    min-width: 0;
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+}
+
+/* Typografie-Upgrade: eigenstaendiger, ovaler Markenstempel */
+.brand {
+  flex: 0 0 auto;
+}
+
+.brand-mark {
+  display: inline-grid;
+  width: clamp(172px, 16vw, 218px);
+  min-height: 72px;
+  aspect-ratio: auto;
+  place-items: center;
+  gap: 0;
+  border: 1px solid rgba(255, 143, 210, 0.72);
+  border-radius: 999px;
+  padding: 9px 24px 11px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(255, 216, 239, 0.96), rgba(236, 46, 163, 0.92) 58%, rgba(46, 159, 85, 0.58)),
+    url("assets/brand-emotionheader.jpg");
+  background-position: left center;
+  background-size: cover;
+  box-shadow: 0 18px 54px rgba(236, 46, 163, 0.22);
+  font-family: "DM Serif Display", "Playfair Display", Georgia, serif;
+  line-height: 1;
+  text-align: center;
+}
+
+.brand-word {
+  display: block;
+  font-size: clamp(2rem, 2.35vw, 2.55rem);
+  line-height: 0.92;
+  text-shadow: 0 2px 18px rgba(18, 55, 58, 0.22);
+}
+
+.brand-subline {
+  display: block;
+  margin-top: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1180px) and (min-width: 980px) {
+  .brand-mark {
+    width: 170px;
+    min-height: 66px;
+    padding-inline: 18px;
+  }
+
+  .brand-word {
+    font-size: 2rem;
+  }
+
+  nav {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 759px) {
+  .brand-mark {
+    width: 152px;
+    min-height: 58px;
+    padding: 8px 16px;
+  }
+
+  .brand-word {
+    font-size: 1.72rem;
+  }
+
+  .brand-subline {
+    font-size: 0.58rem;
+  }
+}

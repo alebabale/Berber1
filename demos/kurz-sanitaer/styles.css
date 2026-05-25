@@ -1,0 +1,12 @@
+@import url("../_shared/premium-shk.css");
+
+:root {
+  --dark: #101420;
+  --deep: #151b2b;
+  --gold: #c6a05a;
+  --accent: #44618f;
+  --accent-dark: #17345f;
+  --hero-image: url("../kurz-sanitaer/assets/hero.jpg");
+  --feature-image: url("../kurz-sanitaer/assets/bath.jpg");
+  --texture-image: url("../kurz-sanitaer/assets/detail-2.jpg");
+}

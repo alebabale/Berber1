@@ -1,0 +1,302 @@
+:root {
+  --dark: #11100e;
+  --cream: #f7f3eb;
+  --cream-deep: #efe5d2;
+  --gold: #a88a00;
+  --gold-light: #c8aa19;
+  --ink: #17130f;
+  --text: #f8f5ec;
+  --muted: rgba(248, 245, 236, 0.72);
+  --shadow: 0 32px 90px rgba(0, 0, 0, 0.34);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--dark);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px clamp(18px, 5vw, 64px);
+  background: linear-gradient(to bottom, rgba(10, 9, 8, 0.78), transparent);
+}
+
+.brand, nav a, .header-cta {
+  font-weight: 800;
+  letter-spacing: 0.075rem;
+}
+
+nav { display: none; gap: 30px; color: rgba(255,255,255,.72); }
+
+.header-cta {
+  padding: 12px 19px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+}
+
+.hero,
+.demo-section,
+.problem-section,
+.system-section,
+.module-section,
+.booking {
+  background:
+    linear-gradient(90deg, rgba(17,16,14,.96), rgba(17,16,14,.78) 46%, rgba(17,16,14,.2)),
+    url("assets/ai-funnel-hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding: 108px clamp(22px, 6vw, 84px) 54px;
+}
+
+.hero-panel {
+  max-width: 790px;
+  min-width: 0;
+  padding: clamp(34px, 5vw, 58px);
+  border-radius: 0 0 56px 0;
+  background: rgba(17,16,14,.64);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(3px);
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 24px;
+  color: var(--gold-light);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .175rem;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1, h2 {
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: .175rem;
+}
+
+h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(2.65rem, 5.4vw, 4.15rem); }
+h2 { margin-bottom: 24px; font-size: clamp(2.25rem, 5vw, 3.6rem); }
+h3 { color: var(--gold); font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 400; line-height: 1.08; }
+
+.hero-copy,
+.section-heading p,
+.booking p {
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: .025rem;
+}
+
+.hero-actions {
+  display: grid;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 68px;
+  padding: 18px 30px;
+  border: 0;
+  border-radius: 999px;
+  font-family: Roboto, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.22rem);
+  font-weight: 800;
+  letter-spacing: .075rem;
+  cursor: pointer;
+  max-width: 100%;
+  min-width: 0;
+  text-align: left;
+  white-space: normal;
+}
+
+.btn::after { content: "→"; font-size: 1.55rem; }
+.btn-light { color: var(--ink); background: var(--cream); }
+.btn-gold { color: #fff; background: var(--gold); box-shadow: 0 18px 46px rgba(168,138,0,.28); }
+
+.hero-stats {
+  display: grid;
+  gap: 10px;
+  color: var(--gold-light);
+  font-weight: 800;
+  letter-spacing: .11rem;
+}
+
+section { padding: clamp(82px, 12vw, 150px) clamp(22px, 6vw, 84px); }
+
+.section-heading {
+  max-width: 920px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.demo-grid,
+.cards,
+.timeline,
+.booking {
+  display: grid;
+  gap: 24px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.lead-card,
+.cards article,
+.timeline article,
+.calendly-card {
+  border-radius: 48px;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.lead-card,
+.cards article,
+.timeline article,
+.calendly-card {
+  padding: clamp(26px, 4vw, 38px);
+}
+
+ul {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li::before { content: "✓ "; color: var(--gold); font-weight: 800; }
+
+.cards article span,
+.timeline span {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--gold);
+  font-family: Rowdies, sans-serif;
+}
+
+.cards p,
+.timeline p {
+  color: rgba(23,19,15,.68);
+  font-weight: 700;
+}
+
+.booking {
+  align-items: start;
+}
+
+.hero-note {
+  color: var(--muted);
+  font-weight: 300;
+  letter-spacing: .09rem;
+}
+
+.demo-grid.compact {
+  max-width: 1040px;
+}
+
+.highlight-card {
+  background: linear-gradient(150deg, var(--cream), #fffaf0);
+}
+
+.highlight-card .btn {
+  margin-top: 18px;
+}
+
+.calendly-card {
+  min-height: 740px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.calendly-fallback {
+  display: grid;
+  gap: 14px;
+  padding: 22px 18px 10px;
+  text-align: center;
+}
+
+.calendly-fallback strong {
+  color: var(--ink);
+  font-size: 1.25rem;
+}
+
+.calendly-fallback p {
+  margin-bottom: 4px;
+  color: rgba(23,19,15,.66);
+  font-weight: 700;
+}
+
+.calendly-inline-widget {
+  width: 100%;
+  height: 640px;
+  min-width: 280px;
+}
+
+.final-cta {
+  min-height: 78svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(17,16,14,.62), rgba(17,16,14,.86)),
+    url("assets/ai-funnel-hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.final-cta > * { max-width: 900px; }
+
+@media (min-width: 720px) {
+  nav { display: flex; }
+  .hero-actions, .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .demo-grid, .booking { grid-template-columns: .95fr 1.05fr; }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .timeline { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 719px) {
+  .btn {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .site-header {
+    align-items: flex-start;
+  }
+
+  .header-cta {
+    max-width: 48%;
+    text-align: center;
+  }
+}

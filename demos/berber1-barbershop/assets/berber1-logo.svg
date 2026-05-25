@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 420" role="img" aria-labelledby="title desc">
+  <title id="title">Berber1 Bietigheim Logo</title>
+  <desc id="desc">Zweidimensionales Berber1 Logo mit grosser Eins, rotem Band und BERBER Schriftzug</desc>
+  <rect width="620" height="420" rx="28" fill="#090807"/>
+  <path d="M143 118 289 91 328 121 182 148Z" fill="#c6282e"/>
+  <path d="M331 121 485 92 518 123 364 151Z" fill="#c6282e"/>
+  <path d="M283 92 328 121 283 150Z" fill="#8e171b"/>
+  <path d="M485 92 518 123 485 152Z" fill="#8e171b"/>
+  <text x="221" y="132" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="24" font-weight="900" fill="#fff5ec">ESTD.</text>
+  <text x="423" y="132" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="24" font-weight="900" fill="#fff5ec">2018</text>
+  <text x="312" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="404" font-weight="900" fill="#f7f4ef">1</text>
+  <text x="310" y="254" text-anchor="middle" font-family="Rockwell Extra Bold, Georgia, serif" font-size="112" font-weight="900" fill="#f7f4ef" stroke="#090807" stroke-width="8" paint-order="stroke">BERBER</text>
+  <line x1="118" y1="292" x2="235" y2="292" stroke="#c6282e" stroke-width="9" stroke-linecap="square"/>
+  <line x1="386" y1="292" x2="504" y2="292" stroke="#c6282e" stroke-width="9" stroke-linecap="square"/>
+  <text x="310" y="307" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="33" font-weight="900" fill="#c6282e" letter-spacing="11">BIETIGHEIM</text>
+</svg>

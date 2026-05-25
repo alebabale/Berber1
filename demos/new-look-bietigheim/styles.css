@@ -1,0 +1,1229 @@
+:root {
+  --black: #070605;
+  --ink: #17120c;
+  --cream: #f7efe0;
+  --paper: #fff9ed;
+  --muted: rgba(247, 239, 224, 0.72);
+  --gold: #d5ad62;
+  --gold-soft: #ffe2a0;
+  --whatsapp: #1fb56d;
+  --whatsapp-dark: #128c52;
+  --line: rgba(247, 239, 224, 0.14);
+  --dark-line: rgba(23, 18, 12, 0.12);
+  --shadow: 0 34px 100px rgba(0, 0, 0, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--cream);
+  background: var(--black);
+  font-family: Manrope, system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px clamp(18px, 5vw, 72px);
+  background: rgba(7, 6, 5, 0.78);
+  border-bottom: 1px solid rgba(247, 239, 224, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 104px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(213, 173, 98, 0.44);
+  border-radius: 999px;
+  color: var(--gold-soft);
+  background: #050403;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 0.92;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.brand-mark.large {
+  width: min(250px, 68vw);
+  font-size: clamp(2rem, 6vw, 3.4rem);
+}
+
+.brand-mark.mini {
+  width: 72px;
+  font-size: 0.82rem;
+  flex: 0 0 auto;
+}
+
+nav {
+  display: none;
+  gap: 26px;
+  color: rgba(247, 239, 224, 0.72);
+  font-weight: 900;
+}
+
+.mobile-section-toggle,
+.mobile-section-menu {
+  display: none;
+}
+
+.header-cta,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 56px;
+  border: 0;
+  border-radius: 999px;
+  padding: 15px 22px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.btn::after,
+.header-cta::after {
+  content: "->";
+}
+
+.btn-gold,
+.header-cta {
+  color: #120d07;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  box-shadow: 0 18px 50px rgba(213, 173, 98, 0.24);
+}
+
+.btn-whatsapp {
+  color: #fff;
+  background: linear-gradient(135deg, #35d889, var(--whatsapp), var(--whatsapp-dark));
+  box-shadow: 0 18px 50px rgba(31, 181, 109, 0.22);
+}
+
+.btn-outline {
+  border: 1px solid rgba(247, 239, 224, 0.22);
+  background: rgba(247, 239, 224, 0.07);
+}
+
+.btn-outline.dark {
+  color: var(--ink);
+  border-color: rgba(23, 18, 12, 0.16);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.hero {
+  min-height: 100svh;
+  display: grid;
+  gap: 34px;
+  align-items: end;
+  padding: 132px clamp(22px, 6vw, 88px) 54px;
+  background:
+    linear-gradient(90deg, rgba(7, 6, 5, 0.96), rgba(7, 6, 5, 0.66) 55%, rgba(7, 6, 5, 0.16)),
+    url("assets/salon-interior-premium.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-copy {
+  max-width: 880px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 22px;
+  font-family: Georgia, serif;
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 860px;
+  font-size: clamp(3.4rem, 8vw, 7.2rem);
+}
+
+h2 {
+  font-size: clamp(2.4rem, 5.8vw, 5.2rem);
+}
+
+.hero-copy p:not(.eyebrow) {
+  max-width: 680px;
+  color: rgba(247, 239, 224, 0.78);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  font-weight: 700;
+}
+
+.hero-copy strong {
+  color: #fff9ed;
+  font-family: Georgia, serif;
+  font-size: 1.16em;
+}
+
+.hero-actions,
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-proof {
+  margin-top: 18px;
+}
+
+.hero-proof span {
+  padding: 9px 13px;
+  border: 1px solid rgba(247, 239, 224, 0.16);
+  border-radius: 999px;
+  color: rgba(247, 239, 224, 0.82);
+  background: rgba(247, 239, 224, 0.08);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.hero-card {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  width: min(380px, 100%);
+  padding: 28px;
+  border: 1px solid rgba(213, 173, 98, 0.28);
+  border-radius: 34px;
+  background: rgba(7, 6, 5, 0.72);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero-card-meta {
+  display: grid;
+  gap: 6px;
+  color: rgba(247, 239, 224, 0.86);
+  text-align: center;
+  font-weight: 850;
+}
+
+.hero-system {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgba(247, 239, 224, 0.14);
+  border-radius: 22px;
+  background: rgba(247, 239, 224, 0.08);
+  text-align: center;
+}
+
+.hero-system span {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.hero-system strong {
+  color: var(--cream);
+  line-height: 1.2;
+}
+
+.hero-system em {
+  color: rgba(247, 239, 224, 0.66);
+  font-size: 0.84rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.mini-route {
+  margin-top: 8px;
+  color: var(--gold-soft);
+  font-weight: 950;
+}
+
+section {
+  padding: clamp(78px, 12vw, 144px) clamp(22px, 6vw, 88px);
+}
+
+.booking-flow {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 84% 20%, rgba(213, 173, 98, 0.2), transparent 34%),
+    #080705;
+}
+
+.flow-copy {
+  max-width: 850px;
+}
+
+.flow-copy p:not(.eyebrow) {
+  max-width: 700px;
+  color: rgba(247, 239, 224, 0.74);
+  font-weight: 750;
+}
+
+.flow-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.flow-steps article {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid rgba(247, 239, 224, 0.14);
+  border-radius: 24px;
+  background: rgba(247, 239, 224, 0.08);
+}
+
+.flow-steps span,
+.quick-slots button {
+  color: var(--gold-soft);
+  font-weight: 950;
+}
+
+.flow-steps p {
+  margin: 3px 0 0;
+  color: rgba(247, 239, 224, 0.68);
+  font-weight: 760;
+}
+
+.flow-steps em {
+  color: #120d07;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.quick-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.quick-slots button {
+  min-height: 48px;
+  border: 1px solid rgba(247, 239, 224, 0.16);
+  border-radius: 999px;
+  padding: 12px 16px;
+  color: var(--cream);
+  background: rgba(247, 239, 224, 0.08);
+  font: inherit;
+  cursor: pointer;
+}
+
+.trust-section {
+  display: grid;
+  gap: 16px;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.trust-section article,
+.service-grid article,
+.price-grid article {
+  padding: 26px;
+  border: 1px solid var(--dark-line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.trust-section span,
+.service-grid span,
+.price-grid span {
+  color: #9a6b23;
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.trust-section p,
+.service-grid p,
+.contact-section p {
+  color: rgba(23, 18, 12, 0.68);
+  font-weight: 700;
+}
+
+.services,
+.contact-section,
+.booking-section,
+.looks-section,
+.faq-section {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.section-heading {
+  max-width: 920px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.service-layout {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.service-grid,
+.price-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.service-grid article a,
+.price-grid article a,
+.inline-action {
+  color: #8b5f1f;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 950;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.service-image {
+  overflow: hidden;
+  margin: 0;
+  border-radius: 30px;
+  box-shadow: 0 28px 80px rgba(23, 18, 12, 0.16);
+}
+
+.service-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.image-mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+  background: var(--black);
+}
+
+.image-mosaic img {
+  width: 100%;
+  height: clamp(190px, 28vw, 360px);
+  object-fit: cover;
+}
+
+.image-mosaic img:nth-child(even) {
+  filter: saturate(0.88) contrast(1.04);
+}
+
+.looks-section {
+  background: var(--cream);
+}
+
+.look-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.look-grid article {
+  overflow: hidden;
+  border: 1px solid var(--dark-line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 24px 70px rgba(23, 18, 12, 0.1);
+}
+
+.look-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.look-grid div {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.look-grid span {
+  color: #9a6b23;
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.look-grid strong {
+  font-family: Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  line-height: 1.04;
+}
+
+.price-section {
+  color: var(--cream);
+  background: #090705;
+}
+
+.price-grid article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  color: var(--ink);
+}
+
+.price-grid article strong {
+  font-family: Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.price-grid article p {
+  margin: 0;
+  color: rgba(23, 18, 12, 0.68);
+  font-weight: 750;
+}
+
+.booking-section {
+  display: grid;
+  gap: 34px;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 249, 237, 0.96), rgba(247, 239, 224, 0.88)),
+    url("assets/salon-waiting-area.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.booking-section > div:first-child {
+  max-width: 820px;
+}
+
+.booking-section p:not(.eyebrow) {
+  max-width: 680px;
+  color: rgba(23, 18, 12, 0.68);
+  font-weight: 750;
+}
+
+.booking-section .quick-slots button {
+  color: var(--ink);
+  border-color: rgba(23, 18, 12, 0.14);
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.planity-panel {
+  display: grid;
+  gap: 14px;
+  padding: clamp(18px, 4vw, 28px);
+  border: 1px solid rgba(23, 18, 12, 0.12);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 30px 90px rgba(23, 18, 12, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.planity-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.planity-head div {
+  display: grid;
+  gap: 2px;
+}
+
+.planity-head strong {
+  font-family: Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.04;
+}
+
+.planity-head span {
+  color: rgba(23, 18, 12, 0.62);
+  font-weight: 800;
+}
+
+.planity-panel iframe {
+  width: 100%;
+  min-height: 360px;
+  border: 1px solid var(--dark-line);
+  border-radius: 22px;
+  background: #fff;
+}
+
+.planity-fallback {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(23, 18, 12, 0.1);
+  border-radius: 20px;
+  background: rgba(255, 249, 237, 0.72);
+}
+
+.planity-fallback strong {
+  font-size: 0.95rem;
+}
+
+.planity-fallback button,
+.planity-fallback a {
+  width: fit-content;
+  border: 0;
+  color: #8b5f1f;
+  background: transparent;
+  font: inherit;
+  font-weight: 950;
+  cursor: pointer;
+  padding: 0;
+}
+
+.location-section {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(255, 249, 237, 0.94), rgba(247, 239, 224, 0.8)),
+    url("assets/salon-detail.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.location-section > div:first-child {
+  max-width: 780px;
+}
+
+.location-section p:not(.eyebrow) {
+  max-width: 620px;
+  color: rgba(23, 18, 12, 0.7);
+  font-weight: 750;
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.location-card {
+  display: grid;
+  gap: 8px;
+  padding: clamp(24px, 5vw, 38px);
+  border: 1px solid rgba(23, 18, 12, 0.12);
+  border-radius: 28px;
+  color: var(--cream);
+  background: rgba(7, 6, 5, 0.84);
+  box-shadow: 0 28px 80px rgba(23, 18, 12, 0.22);
+  overflow: hidden;
+}
+
+.location-card img {
+  width: calc(100% + 76px);
+  max-width: none;
+  height: 190px;
+  margin: calc(-1 * clamp(24px, 5vw, 38px)) calc(-1 * clamp(24px, 5vw, 38px)) 12px;
+  object-fit: cover;
+}
+
+.location-card strong {
+  color: var(--gold-soft);
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1;
+}
+
+.contact-section {
+  display: grid;
+  gap: 34px;
+  align-items: center;
+}
+
+.faq-section {
+  background: #fff9ed;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+details {
+  padding: 20px;
+  border: 1px solid var(--dark-line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+summary {
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+details p {
+  margin: 12px 0 0;
+  color: rgba(23, 18, 12, 0.68);
+  font-weight: 750;
+}
+
+.quick-contact {
+  display: grid;
+  gap: 18px;
+  padding: clamp(22px, 5vw, 34px);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 28px 80px rgba(23, 18, 12, 0.12);
+}
+
+.quick-contact > strong {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.contact-actions,
+.contact-facts {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-action {
+  display: grid;
+  gap: 3px;
+  padding: 18px;
+  border: 1px solid var(--dark-line);
+  border-radius: 22px;
+  color: var(--ink);
+  background: var(--paper);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.contact-action.primary {
+  color: #120d07;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+}
+
+.contact-action.whatsapp {
+  color: #fff;
+  border-color: rgba(31, 181, 109, 0.34);
+  background: linear-gradient(135deg, #35d889, var(--whatsapp), var(--whatsapp-dark));
+}
+
+.contact-action span,
+.contact-facts span {
+  color: #9a6b23;
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.contact-action.primary span {
+  color: rgba(18, 13, 7, 0.68);
+}
+
+.contact-action.whatsapp span,
+.contact-action.whatsapp small {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-action strong {
+  font-family: Georgia, serif;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  line-height: 1.04;
+}
+
+.contact-action small {
+  color: rgba(23, 18, 12, 0.66);
+  font-weight: 800;
+}
+
+.contact-facts {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.contact-facts div {
+  display: grid;
+  gap: 4px;
+  border: 1px solid var(--dark-line);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(247, 239, 224, 0.7);
+}
+
+footer {
+  display: grid;
+  gap: 12px;
+  padding: 34px clamp(22px, 6vw, 88px);
+  color: rgba(247, 239, 224, 0.72);
+  background: #050403;
+}
+
+footer strong {
+  color: var(--cream);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-weight: 900;
+}
+
+.mobile-action-bar {
+  display: none;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 22px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #35d889, var(--whatsapp), var(--whatsapp-dark));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  font: inherit;
+  font-weight: 950;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.floating-whatsapp.is-visible,
+.floating-whatsapp.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.whatsapp-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 92px;
+  z-index: 45;
+  display: grid;
+  gap: 16px;
+  width: min(430px, calc(100vw - 28px));
+  max-height: calc(100svh - 118px);
+  overflow-y: auto;
+  padding: 24px;
+  border: 1px solid rgba(247, 239, 224, 0.16);
+  border-radius: 30px;
+  color: var(--cream);
+  background: rgba(7, 6, 5, 0.94);
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.48);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(18px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  backdrop-filter: blur(18px);
+}
+
+.whatsapp-panel.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.widget-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(247, 239, 224, 0.16);
+  border-radius: 999px;
+  color: var(--cream);
+  background: rgba(247, 239, 224, 0.08);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.whatsapp-panel > strong {
+  max-width: 310px;
+  color: var(--cream);
+  font-family: Georgia, serif;
+  font-size: clamp(1.55rem, 5vw, 2.25rem);
+  line-height: 1.12;
+}
+
+.widget-group,
+.whatsapp-panel label {
+  display: grid;
+  gap: 10px;
+}
+
+.widget-group > span,
+.whatsapp-panel label span {
+  color: rgba(247, 239, 224, 0.74);
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.widget-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.widget-options button {
+  min-height: 52px;
+  border: 1px solid rgba(247, 239, 224, 0.14);
+  border-radius: 16px;
+  color: var(--cream);
+  background: rgba(247, 239, 224, 0.08);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.widget-options button.is-selected {
+  color: #120d07;
+  border-color: rgba(255, 226, 160, 0.9);
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+}
+
+.whatsapp-panel input {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid rgba(247, 239, 224, 0.14);
+  border-radius: 18px;
+  padding: 14px 16px;
+  color: var(--cream);
+  background: rgba(247, 239, 224, 0.08);
+  font: inherit;
+  font-weight: 750;
+}
+
+.whatsapp-panel input::placeholder {
+  color: rgba(247, 239, 224, 0.48);
+}
+
+.widget-note {
+  margin: -2px 0 0;
+  color: rgba(247, 239, 224, 0.66);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+@media (min-width: 980px) {
+  nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 760px) {
+  .hero,
+  .service-layout,
+  .contact-section,
+  .location-section,
+  .booking-section,
+  .booking-flow {
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  }
+
+  .trust-section {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .price-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .look-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 979px) {
+  .mobile-section-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-left: auto;
+    border: 1px solid rgba(247, 239, 224, 0.16);
+    border-radius: 999px;
+    padding: 10px 14px;
+    color: var(--cream);
+    background: rgba(247, 239, 224, 0.08);
+    font: inherit;
+    font-weight: 950;
+    cursor: pointer;
+  }
+
+  .mobile-section-toggle[aria-expanded="true"] {
+    color: #120d07;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  }
+
+  .mobile-section-menu {
+    position: fixed;
+    right: 14px;
+    top: 86px;
+    left: 14px;
+    z-index: 25;
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid rgba(247, 239, 224, 0.16);
+    border-radius: 24px;
+    background: rgba(7, 6, 5, 0.94);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+
+  .mobile-section-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-section-menu a {
+    padding: 13px 14px;
+    border-radius: 16px;
+    color: rgba(247, 239, 224, 0.82);
+    background: rgba(247, 239, 224, 0.08);
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 759px) {
+  body {
+    padding-bottom: 74px;
+  }
+
+  .site-header {
+    position: fixed;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 10px 14px;
+    gap: 10px;
+    overflow: visible;
+  }
+
+  .brand-mark {
+    width: 76px;
+    font-size: 0.94rem;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 120px 24px 128px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 13vw, 4.3rem);
+  }
+
+  .hero-actions {
+    display: grid;
+    justify-items: start;
+  }
+
+  .flow-steps article {
+    grid-template-columns: auto 1fr;
+  }
+
+  .flow-steps em {
+    justify-self: start;
+    grid-column: 2;
+  }
+
+  .hero-copy p:not(.eyebrow) {
+    max-width: min(21rem, 100%);
+  }
+
+  .hero-proof {
+    display: grid;
+  }
+
+  .hero-proof span {
+    width: fit-content;
+  }
+
+  .hero-card {
+    display: none;
+  }
+
+  .image-mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .image-mosaic img {
+    height: 170px;
+  }
+
+  .planity-panel iframe {
+    min-height: 300px;
+  }
+
+  .contact-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-contact {
+    border-radius: 24px;
+  }
+
+  .quick-contact > strong {
+    font-size: 1.72rem;
+  }
+
+  .hero-actions .btn,
+  .location-actions .btn,
+  .final-actions .btn {
+    width: min(100%, 330px);
+    min-width: 0;
+    text-align: center;
+  }
+
+  .hero-actions .btn:not(:first-child) {
+    display: none;
+  }
+
+  .request-actions .btn,
+  .contact-actions .btn {
+    width: min(100%, 360px);
+    min-width: 0;
+    text-align: center;
+  }
+
+  .mobile-action-bar {
+    position: fixed;
+    right: 18px;
+    bottom: 12px;
+    left: 18px;
+    z-index: 30;
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr 0.92fr;
+    gap: 8px;
+    width: min(calc(100vw - 36px), 354px);
+    margin-inline: auto;
+    padding: 8px;
+    border: 1px solid rgba(247, 239, 224, 0.16);
+    border-radius: 999px;
+    background: rgba(7, 6, 5, 0.9);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(14px);
+  }
+
+  .mobile-action-bar a,
+  .mobile-action-bar button {
+    display: grid;
+    min-height: 48px;
+    place-items: center;
+    border: 0;
+    border-radius: 999px;
+    color: #120d07;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 950;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .mobile-action-bar button {
+    color: #fff;
+    background: linear-gradient(135deg, #35d889, var(--whatsapp), var(--whatsapp-dark));
+  }
+
+  .mobile-action-bar a:last-child {
+    color: var(--cream);
+    border: 1px solid rgba(247, 239, 224, 0.18);
+    background: rgba(247, 239, 224, 0.08);
+  }
+
+  .floating-whatsapp {
+    display: none;
+  }
+
+  .whatsapp-panel {
+    right: 12px;
+    bottom: 86px;
+    left: 12px;
+    width: auto;
+    max-height: calc(100svh - 112px);
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .widget-options {
+    grid-template-columns: 1fr;
+  }
+}
