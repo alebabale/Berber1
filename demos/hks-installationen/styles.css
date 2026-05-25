@@ -1,0 +1,12 @@
+@import url("../_shared/premium-shk.css");
+
+:root {
+  --dark: #0f1110;
+  --deep: #181c1b;
+  --gold: #c8a45d;
+  --accent: #b36f3a;
+  --accent-dark: #74431f;
+  --hero-image: url("../hks-installationen/assets/hero.jpg");
+  --feature-image: url("../hks-installationen/assets/service.png");
+  --texture-image: url("../hks-installationen/assets/bath.png");
+}

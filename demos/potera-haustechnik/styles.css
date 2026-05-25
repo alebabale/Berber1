@@ -1,0 +1,12 @@
+@import url("../_shared/premium-shk.css");
+
+:root {
+  --dark: #111416;
+  --deep: #132124;
+  --gold: #c5a15a;
+  --accent: #1b8b95;
+  --accent-dark: #0d5b65;
+  --hero-image: url("../potera-haustechnik/assets/hero.jpeg");
+  --feature-image: url("../potera-haustechnik/assets/callout.jpg");
+  --texture-image: url("../potera-haustechnik/assets/solar.jpg");
+}

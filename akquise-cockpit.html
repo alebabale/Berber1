@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Akquise-Cockpit fuer moderne Business-Websites: Demos, Ranking, Outreach und naechste Schritte."
+    />
+    <title>Akquise Cockpit | Moderne Business Websites</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800&family=Roboto:wght@700&display=swap");
+
+      :root {
+        --ink: #151412;
+        --soft-ink: rgba(21, 20, 18, 0.72);
+        --paper: #fffaf2;
+        --cream: #f7efe2;
+        --gold: #c7a15b;
+        --sage: #587267;
+        --clay: #b66d4d;
+        --line: rgba(21, 20, 18, 0.12);
+        --dark: #11100e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "M PLUS Rounded 1c", system-ui, sans-serif;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 250, 242, 0.14);
+        background: rgba(17, 16, 14, 0.92);
+        backdrop-filter: blur(18px);
+      }
+
+      .topbar .shell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-height: 72px;
+      }
+
+      .brand,
+      .nav a,
+      .btn,
+      .tag,
+      .label,
+      .score {
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+      }
+
+      .brand {
+        color: var(--paper);
+        letter-spacing: 0.04rem;
+      }
+
+      .nav {
+        display: none;
+        align-items: center;
+        gap: 22px;
+        color: rgba(255, 250, 242, 0.72);
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        color: var(--paper);
+        background:
+          linear-gradient(100deg, rgba(17, 16, 14, 0.96), rgba(17, 16, 14, 0.7) 52%, rgba(17, 16, 14, 0.18)),
+          url("demos/potera-haustechnik/assets/callout.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero .shell {
+        display: grid;
+        align-content: end;
+        min-height: 72svh;
+        padding: 96px 0 54px;
+      }
+
+      .eyebrow,
+      .section-kicker {
+        margin: 0 0 18px;
+        color: var(--gold);
+        font-family: Roboto, sans-serif;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.18rem;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2 {
+        font-weight: 100;
+        letter-spacing: 0.04rem;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 920px;
+        margin-bottom: 24px;
+        font-size: clamp(3rem, 8vw, 6.2rem);
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-size: clamp(2.2rem, 5.2vw, 4.8rem);
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+        line-height: 1.16;
+      }
+
+      .hero-copy {
+        max-width: 720px;
+        color: rgba(255, 250, 242, 0.74);
+        font-size: clamp(1.08rem, 2vw, 1.28rem);
+        font-weight: 700;
+      }
+
+      .actions {
+        display: grid;
+        gap: 12px;
+        width: min(620px, 100%);
+        margin-top: 28px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-height: 58px;
+        padding: 16px 22px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: var(--paper);
+        font-size: 0.88rem;
+        letter-spacing: 0.035rem;
+      }
+
+      .btn::after {
+        content: "->";
+      }
+
+      .btn.gold {
+        color: var(--ink);
+        background: linear-gradient(135deg, #f7e4b6, var(--gold));
+      }
+
+      section {
+        padding: clamp(58px, 9vw, 108px) 0;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 18px;
+        margin-bottom: 34px;
+      }
+
+      .section-head p {
+        max-width: 760px;
+        color: var(--soft-ink);
+        font-weight: 700;
+      }
+
+      .metrics {
+        display: grid;
+        gap: 14px;
+        margin-top: -34px;
+        position: relative;
+      }
+
+      .metric {
+        min-height: 150px;
+        padding: 22px;
+        border: 1px solid rgba(255, 250, 242, 0.16);
+        border-radius: 8px;
+        color: var(--paper);
+        background: var(--dark);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+      }
+
+      .metric strong {
+        display: block;
+        margin-bottom: 12px;
+        color: var(--gold);
+        font-size: 2.25rem;
+        line-height: 1;
+      }
+
+      .metric span {
+        color: rgba(255, 250, 242, 0.72);
+        font-weight: 700;
+      }
+
+      .pipeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .lead {
+        display: grid;
+        gap: 20px;
+        padding: clamp(20px, 3vw, 30px);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+      }
+
+      .lead-top {
+        display: grid;
+        gap: 16px;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        color: var(--soft-ink);
+        background: var(--cream);
+        font-size: 0.72rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+      }
+
+      .score {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 86px;
+        min-height: 50px;
+        border-radius: 8px;
+        color: var(--paper);
+        background: var(--sage);
+      }
+
+      .lead p {
+        margin-bottom: 0;
+        color: var(--soft-ink);
+        font-weight: 700;
+      }
+
+      .lead-actions {
+        display: grid;
+        gap: 10px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .card {
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--cream);
+      }
+
+      .card p,
+      .card li {
+        color: var(--soft-ink);
+        font-weight: 700;
+      }
+
+      .card ul {
+        display: grid;
+        gap: 10px;
+        margin: 16px 0 0;
+        padding-left: 20px;
+      }
+
+      .dark-band {
+        color: var(--paper);
+        background: var(--dark);
+      }
+
+      .dark-band .section-head p,
+      .dark-band .card p,
+      .dark-band .card li {
+        color: rgba(255, 250, 242, 0.7);
+      }
+
+      .dark-band .card {
+        border-color: rgba(255, 250, 242, 0.14);
+        background: rgba(255, 250, 242, 0.07);
+      }
+
+      .outreach {
+        display: grid;
+        gap: 18px;
+      }
+
+      details {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+        overflow: hidden;
+      }
+
+      summary {
+        cursor: pointer;
+        padding: 20px 22px;
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+      }
+
+      pre {
+        margin: 0;
+        padding: 0 22px 22px;
+        white-space: pre-wrap;
+        color: var(--soft-ink);
+        font: 700 0.95rem/1.55 "M PLUS Rounded 1c", system-ui, sans-serif;
+      }
+
+      .checklist {
+        counter-reset: step;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        align-items: start;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .step::before {
+        counter-increment: step;
+        content: counter(step);
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        color: var(--paper);
+        background: var(--clay);
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+      }
+
+      footer {
+        padding: 28px 0 42px;
+        color: rgba(255, 250, 242, 0.64);
+        background: var(--dark);
+      }
+
+      footer .shell {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      @media (min-width: 720px) {
+        .nav {
+          display: flex;
+        }
+
+        .actions,
+        .lead-actions {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .metrics,
+        .grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .lead {
+          grid-template-columns: 1fr minmax(240px, 0.34fr);
+          align-items: center;
+        }
+
+        .lead-top {
+          grid-template-columns: auto 1fr;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell">
+        <a class="brand" href="#top">Modernisiere Business Websites</a>
+        <nav class="nav" aria-label="Cockpit Navigation">
+          <a href="#pipeline">Pipeline</a>
+          <a href="#outreach">Outreach</a>
+          <a href="#naechste-schritte">Next Steps</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="shell">
+          <p class="eyebrow">Akquise Cockpit 24.05.2026</p>
+          <h1>Drei Demo-Websites sind bereit. Jetzt wird daraus Vertrieb.</h1>
+          <p class="hero-copy">
+            Der Fokus liegt auf lokalen SHK- und Badbetrieben mit sichtbarem
+            Vorher/Nachher-Hebel: hochwertige Wirkung, klarere Anfragewege und
+            mehr Vertrauen im ersten Bildschirm.
+          </p>
+          <div class="actions">
+            <a class="btn gold" href="demos/index.html">Demo-Auswahl oeffnen</a>
+            <a class="btn" href="funnel/index.html">Website-Check Funnel</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="shell">
+        <div class="metrics" aria-label="Projekt Kennzahlen">
+          <article class="metric">
+            <strong>3</strong>
+            <span>fertige Premium-Demos fuer konkrete Betriebe</span>
+          </article>
+          <article class="metric">
+            <strong>8.4</strong>
+            <span>durchschnittliche Abschlusschance im aktuellen Batch</span>
+          </article>
+          <article class="metric">
+            <strong>15</strong>
+            <span>Minuten Ziel fuer den ersten Demo-Termin</span>
+          </article>
+        </div>
+      </div>
+
+      <section id="pipeline">
+        <div class="shell">
+          <div class="section-head">
+            <p class="section-kicker">Pipeline</p>
+            <h2>Priorisierte Kandidaten fuer die erste Kontaktwelle.</h2>
+            <p>
+              Die Reihenfolge folgt Abschlusschance, optischem Sprung und
+              Umsatzhebel. Potera zuerst, weil Demo-Potenzial und Akquise-Story
+              am saubersten zusammenkommen.
+            </p>
+          </div>
+
+          <div class="pipeline">
+            <article class="lead">
+              <div class="lead-top">
+                <span class="score">8.7/10</span>
+                <div>
+                  <div class="tag-row">
+                    <span class="tag">Top Prioritaet</span>
+                    <span class="tag">Bad + Haustechnik</span>
+                    <span class="tag">Ludwigsburg</span>
+                  </div>
+                  <h3>Potera Haustechnik</h3>
+                  <p>
+                    Alter WordPress-Eindruck, generischer Slider und gute
+                    Leistungen. Die Demo kann sofort zeigen, wie aus Servicekontakten
+                    hochwertigere Bad- und Modernisierungsanfragen werden.
+                  </p>
+                </div>
+              </div>
+              <div class="lead-actions">
+                <a class="btn gold" href="demos/potera-haustechnik/index.html">Demo</a>
+                <a class="btn" href="https://potera-haustechnik.de/">Original</a>
+              </div>
+            </article>
+
+            <article class="lead">
+              <div class="lead-top">
+                <span class="score">8.5/10</span>
+                <div>
+                  <div class="tag-row">
+                    <span class="tag">Starker Sprung</span>
+                    <span class="tag">Badplanung</span>
+                    <span class="tag">Eglosheim</span>
+                  </div>
+                  <h3>H. Kurz Sanitaertechnik</h3>
+                  <p>
+                    Sehr alte Optik, lokale Substanz und klarer Badplanungs-Hebel.
+                    Die neue Seite positioniert den Betrieb als persoenlichen
+                    Beratungsanbieter statt als reine Kontaktseite.
+                  </p>
+                </div>
+              </div>
+              <div class="lead-actions">
+                <a class="btn gold" href="demos/kurz-sanitaer/index.html">Demo</a>
+                <a class="btn" href="https://www.kurz-sanitaer.de/">Original</a>
+              </div>
+            </article>
+
+            <article class="lead">
+              <div class="lead-top">
+                <span class="score">7.9/10</span>
+                <div>
+                  <div class="tag-row">
+                    <span class="tag">Breites Angebot</span>
+                    <span class="tag">SHK-System</span>
+                    <span class="tag">Anfrage-Funnel</span>
+                  </div>
+                  <h3>HKS Installation Sanitaer GmbH</h3>
+                  <p>
+                    Meisterbetrieb mit vielen Leistungen, aber schwacher digitaler
+                    Fuehrung. Die Demo ordnet Bad, Sanitaer, Heizung, Klima und
+                    Solar als hochwertiges Haustechnik-System.
+                  </p>
+                </div>
+              </div>
+              <div class="lead-actions">
+                <a class="btn gold" href="demos/hks-installationen/index.html">Demo</a>
+                <a class="btn" href="https://www.hks-installationen.de/">Original</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-band">
+        <div class="shell">
+          <div class="section-head">
+            <p class="section-kicker">Verkaufslogik</p>
+            <h2>Nicht Website verkaufen. Einen besseren Anfrage-Moment verkaufen.</h2>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <h3>Was zeigen?</h3>
+              <p>
+                Den ersten Bildschirm der Originalseite neben der Demo oeffnen
+                und den Unterschied in Vertrauen, Klarheit und Premium-Wirkung
+                sichtbar machen.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Was sagen?</h3>
+              <p>
+                "Ich habe gesehen, dass Ihre Leistung besser ist als Ihr erster
+                Website-Eindruck. Ich habe eine unverbindliche Demo gebaut."
+              </p>
+            </article>
+            <article class="card">
+              <h3>Was fragen?</h3>
+              <p>
+                "Wollen wir uns 15 Minuten ansehen, ob diese Richtung fuer Ihre
+                naechsten Bad- und Modernisierungsanfragen sinnvoll waere?"
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="outreach">
+        <div class="shell">
+          <div class="section-head">
+            <p class="section-kicker">Outreach</p>
+            <h2>Sendefertige Nachrichten fuer die erste Welle.</h2>
+            <p>
+              Platzhalter fuer die Demo-URL nach dem Hosting ersetzen. Lokal
+              funktionieren die Links bereits, solange der Server im Projektordner
+              laeuft.
+            </p>
+          </div>
+          <div class="outreach">
+            <details open>
+              <summary>Potera Haustechnik</summary>
+              <pre>Betreff: Kurze Idee zu Ihrer Website
+
+Hallo Potera-Team,
+
+ich habe mir Ihre Website kurz angesehen und eine moderne Demo-Version vorbereitet, wie Potera Haustechnik online hochwertiger und klarer wirken koennte.
+
+Mir sind vor allem drei Punkte aufgefallen:
+- Badsanierung und Modernisierung koennten staerker im ersten Eindruck verkauft werden.
+- Der aktuelle Slider und die Texte wirken etwas aelter als Ihre Leistungen.
+- Besucher werden noch nicht klar genug zu einer Anfrage gefuehrt.
+
+Wenn Sie moechten, zeige ich Ihnen die Demo kurz in 15 Minuten:
+https://calendly.com/alezaffino271/wunschtermin-ballonfahrt
+
+Viele Gruesse
+Alessandro Zaffino</pre>
+            </details>
+
+            <details>
+              <summary>H. Kurz Sanitaertechnik</summary>
+              <pre>Betreff: Website-Idee fuer H. Kurz Sanitaertechnik
+
+Hallo Herr Kurz,
+
+ich bin auf Ihre Website gestossen und glaube, dass Ihr Betrieb online deutlich hochwertiger wirken koennte, ohne die persoenliche lokale Art zu verlieren.
+
+Ich habe deshalb eine kurze Demo vorbereitet, wie Ihre Leistungen rund um Badplanung, Sanitaer und Reparatur moderner dargestellt werden koennten.
+
+Besonders stark waere aus meiner Sicht:
+- Badplanung als wertvoller Kernservice sichtbar machen.
+- Telefon und Kontaktformular mobil direkter fuehren.
+- Den alten Website-Eindruck gegen mehr Vertrauen und Klarheit austauschen.
+
+Wenn Sie moechten, zeige ich Ihnen die Demo in 15 Minuten:
+https://calendly.com/alezaffino271/wunschtermin-ballonfahrt
+
+Viele Gruesse
+Alessandro Zaffino</pre>
+            </details>
+
+            <details>
+              <summary>HKS Installation Sanitaer GmbH</summary>
+              <pre>Betreff: Moderne Demo fuer Ihre HKS-Website
+
+Hallo Herr Eisele,
+
+ich habe mir die HKS-Website angesehen und eine moderne Demo-Version vorbereitet, wie Ihr Betrieb online hochwertiger und anfrageorientierter wirken koennte.
+
+Aus meiner Sicht steckt besonders hier Potenzial:
+- Ihr breites Leistungsspektrum koennte klarer und hochwertiger strukturiert werden.
+- Bad, Sanitaer, Heizung, Klima und Solar koennten als starkes Haustechnik-System wirken.
+- Kontakt und Beratung koennten im ersten Sichtfeld sichtbarer werden.
+
+Wenn Sie moechten, koennen wir sie kurz gemeinsam durchgehen:
+https://calendly.com/alezaffino271/wunschtermin-ballonfahrt
+
+Viele Gruesse
+Alessandro Zaffino</pre>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="naechste-schritte">
+        <div class="shell">
+          <div class="section-head">
+            <p class="section-kicker">Naechste Schritte</p>
+            <h2>Von lokalen Demos zu echten Gespraechen.</h2>
+          </div>
+          <div class="checklist">
+            <article class="step">
+              <div>
+                <h3>Demo-URLs live machen</h3>
+                <p>GitHub Pages, Netlify oder eine eigene Subdomain nutzen und lokale Links ersetzen.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div>
+                <h3>Potera als ersten Test senden</h3>
+                <p>Kurze Mail mit Demo-Link und Calendly. Kein langer Pitch, nur eine klare Beobachtung.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div>
+                <h3>Follow-up nach zwei Tagen</h3>
+                <p>Eine knappe Erinnerung mit einem konkreten Vorher/Nachher-Screenshot oder Loom-Hinweis.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div>
+                <h3>Naechsten Batch automatisieren</h3>
+                <p>Recherche, Scoring, Demo-Bau und Outreach in ein wiederholbares System giessen.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell">
+        <strong>Moderne Business Websites</strong>
+        <span>Batch: SHK / Badmodernisierung / Ludwigsburg</span>
+      </div>
+    </footer>
+  </body>
+</html>
